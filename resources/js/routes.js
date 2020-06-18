@@ -3,11 +3,19 @@ import VueRouter from "vue-router";
 let routes = [
     {
         path: "/skills",
-        component: require("./views/Home.vue").default
+        component: require("./views/Skills.vue").default
     },
     {
-        path: "/about",
-        component: require("./views/About.vue").default
+        path: "/projects",
+        component: require("./views/Projects.vue").default
+    },
+    {
+        path: "/resume",
+        component: require("./views/Resume.vue").default
+    },
+    {
+        path: "/contact",
+        component: require("./views/Contact.vue").default
     }
 ];
 export default new VueRouter({

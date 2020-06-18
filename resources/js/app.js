@@ -14,5 +14,15 @@ files.keys().map(key =>
 
 const app = new Vue({
     el: "#app",
+    data: { loading: false },
     router
+});
+
+router.beforeEach((to, from, next) => {
+    app.loading = true;
+    next();
+});
+
+router.afterEach((to, from, next) => {
+    setTimeout(() => (app.loading = false), 500); // timeout for demo purposes
 });

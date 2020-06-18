@@ -7,6 +7,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Jonathan Lilly | Web Developer</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         

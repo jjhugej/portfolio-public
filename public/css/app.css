@@ -12493,3 +12493,8 @@ a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
+body {
+  padding-top: 5vh;
+  font-family: "Nunito", sans-serif;
+}
+

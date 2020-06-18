@@ -1,5 +1,5 @@
 <template>
-  <div class="tabs is-centered">
+  <div id="navbar-root" class="tabs is-centered">
     <ul>
       <router-link tag="li" to="/skills" exact>
         <a>Skills</a>
@@ -25,4 +25,15 @@ export default {
 };
 </script>
 <style scoped>
+#navbar-root {
+  padding-top: 5vh;
+}
+a {
+  padding: 0 25px;
+  font-size: 16px;
+
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 </style>
