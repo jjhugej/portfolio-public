@@ -1,7 +1,5 @@
 require("./bootstrap");
-
-window.Vue = require("vue");
-//window.EventBus = new Vue({});
+import router from "./routes";
 
 const files = require.context("./", true, /\.vue$/i);
 files.keys().map(key =>
@@ -15,5 +13,6 @@ files.keys().map(key =>
 );
 
 const app = new Vue({
-    el: "#app"
+    el: "#app",
+    router
 });

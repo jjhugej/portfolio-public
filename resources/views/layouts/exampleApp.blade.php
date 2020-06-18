@@ -15,7 +15,18 @@
 
     <body>
 
-        @yield('content')
+        <div id="app">
+
+            @include('nav')
+
+            <section class="section">
+                <div class="container">
+                    <router-view></router-view>
+                </div>
+            </section>
+            
+
+        </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
     </body>
