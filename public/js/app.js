@@ -1947,6 +1947,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -2216,7 +2220,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#hero-img[data-v-cb691220] {\r\n  background-image: url(\"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500\");\r\n  background-repeat: no-repeat;\r\n  background-position: center;\r\n  height: 50vh;\r\n  width: 100vw;\n}\r\n", ""]);
+exports.push([module.i, "\n#hero-img[data-v-cb691220] {\r\n  background-color: grey;\r\n  height: 50vh;\n}\nh1[data-v-cb691220] {\r\n  font-size: 40px;\r\n  font-weight: 300;\r\n  margin: 10px 0 5px 0;\r\n  color: #4a4a4a;\r\n  text-align: center;\n}\np[data-v-cb691220] {\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n  color: #4a4a4a;\r\n  text-align: center;\n}\r\n", ""]);
 
 // exports
 
@@ -23182,7 +23186,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { attrs: { id: "hero-img" } })
+      _c("div", { attrs: { id: "hero-img" } }),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "hero-txt" } }, [
+        _c("h1", [_vm._v("Jonathan Lilly")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Full Stack Developer")])
+      ])
     ])
   }
 ]

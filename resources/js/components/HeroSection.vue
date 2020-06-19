@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <div id="hero-img"></div>
+    <div id="hero-txt">
+      <h1>Jonathan Lilly</h1>
+      <p>Full Stack Developer</p>
+    </div>
   </div>
 </template>
 
@@ -13,10 +17,20 @@ export default {
 </script>
 <style scoped>
 #hero-img {
-  background-image: url("https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: grey;
   height: 50vh;
-  width: 100vw;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 10px 0 5px 0;
+  color: #4a4a4a;
+  text-align: center;
+}
+p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-align: center;
 }
 </style>
