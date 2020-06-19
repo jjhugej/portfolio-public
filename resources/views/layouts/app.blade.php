@@ -9,8 +9,11 @@
         <title>Jonathan Lilly | Web Developer</title>
         
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
-
+        
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/5451ef5eac.js" crossorigin="anonymous" defer></script>
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js" defer></script>
         
         
     </head>

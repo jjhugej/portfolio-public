@@ -1,21 +1,78 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">Projects Component</div>
-
-          <div class="card-body">Projects</div>
+    <section class="section">
+        <div class="container">
+            <div class="project-wrapper">
+                <h1>Eve Station Trader</h1>
+                <div class="content-indent">
+                    <div class="content-wrapper tech-wrapper">
+                        <h2>Technologies Used:</h2>
+                        <div class="tech-list">
+                            <span>Laravel</span>
+                            <span>Jquery</span>
+                            <span>Sass</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="content-wrapper links-wrapper">
+                        <h2>
+                            Github:
+                            <a
+                                href="https://github.com/jjhugej/EveStationTrader"
+                                >jjhugej/EveStationTrader</a
+                            >
+                        </h2>
+                    </div>
+                    <div class="content-wrapper summary-wrapper">
+                        <h2>Summary:</h2>
+                        <p>summary goes here</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 </template>
 
 <script>
 export default {
-  mounted() {
-    console.log("About Component mounted.");
-  }
+    mounted() {
+        console.log("About Component mounted.");
+    }
 };
 </script>
+<style scoped>
+.project-wrapper {
+    padding: 20px 80px;
+}
+h1 {
+    font-size: 30px;
+    color: #636b6f;
+    font-weight: 300;
+}
+h2 {
+    font-weight: 600;
+}
+.content-indent {
+    padding-left: 20px;
+}
+.content-wrapper {
+    margin: 10px 0;
+}
+.tech-wrapper {
+    display: flex;
+    margin: 10px 0;
+}
+.tech-list {
+    padding-left: 10px;
+}
+span {
+    padding: 0 10px;
+    margin: 0 2px;
+    border: solid 1px rgb(133, 230, 243);
+    border-radius: 10px;
+}
+.summary-wrapper {
+}
+.summary-wrapper > p {
+    padding-left: 10px;
+}
+</style>
