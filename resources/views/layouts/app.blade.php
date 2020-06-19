@@ -8,7 +8,7 @@
 
         <title>Jonathan Lilly | Web Developer</title>
         
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         

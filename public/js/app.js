@@ -2220,7 +2220,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#hero-img[data-v-cb691220] {\r\n  background-color: grey;\r\n  height: 50vh;\n}\nh1[data-v-cb691220] {\r\n  font-size: 40px;\r\n  font-weight: 300;\r\n  margin: 10px 0 5px 0;\r\n  color: #4a4a4a;\r\n  text-align: center;\n}\np[data-v-cb691220] {\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n  color: #4a4a4a;\r\n  text-align: center;\n}\r\n", ""]);
+exports.push([module.i, "\n#hero-img[data-v-cb691220] {\r\n  background-color: grey;\r\n  height: 50vh;\n}\n#hero-txt[data-v-cb691220] {\r\n  margin-bottom: 2vh;\n}\nh1[data-v-cb691220] {\r\n  font-size: 50px;\r\n  font-weight: 300;\r\n  margin-top: 10px;\r\n  color: #636b6f;\r\n  text-align: center;\n}\np[data-v-cb691220] {\r\n  font-size: 24px;\r\n  color: #636b6f;\r\n  text-align: center;\n}\r\n", ""]);
 
 // exports
 

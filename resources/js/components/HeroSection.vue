@@ -20,17 +20,19 @@ export default {
   background-color: grey;
   height: 50vh;
 }
+#hero-txt {
+  margin-bottom: 2vh;
+}
 h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 300;
-  margin: 10px 0 5px 0;
-  color: #4a4a4a;
+  margin-top: 10px;
+  color: #636b6f;
   text-align: center;
 }
 p {
-  font-size: 20px;
-  font-weight: 600;
-  color: #4a4a4a;
+  font-size: 24px;
+  color: #636b6f;
   text-align: center;
 }
 </style>
