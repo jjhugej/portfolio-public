@@ -12498,3 +12498,7 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+#content-display {
+  min-height: 150vh;
+}
+
