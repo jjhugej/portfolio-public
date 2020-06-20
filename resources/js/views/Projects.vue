@@ -111,9 +111,7 @@
 
 <script>
 export default {
-  mounted() {
-    console.log("Projects Component mounted.");
-  }
+  mounted() {}
 };
 </script>
 <style scoped>

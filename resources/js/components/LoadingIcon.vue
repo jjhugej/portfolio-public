@@ -6,9 +6,7 @@
 
 <script>
 export default {
-  mounted() {
-    console.log("Loading Component mounted.");
-  }
+  mounted() {}
 };
 </script>
 <style scoped>
