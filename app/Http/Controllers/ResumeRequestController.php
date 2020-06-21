@@ -45,6 +45,9 @@ class ResumeRequestController extends Controller
             'position' => 'required',
             'notes' => 'nullable|max:2000',
         ]);
+        $resumeRequest = ResumeRequest::create($validatedData);
+        
+        //$resumeRequest->save();
 
         //TODO: FINISH PERSISTING TO DB and VALIDATE DATA ON FRONTEND AS WELL
         //ResumeRequest::create();

@@ -78,23 +78,25 @@ export default {
     };
   },
   methods: {
-    sendRequest: function() {
+    sendRequest: function(data) {
       //validate
       //make post request to /resumeRequest
-      axios
+      //TODO: FINISH DEBUGGING ERROR WITH PERSISTING MESSAGE
+      console.log(data);
+      /* axios
         .post("/resumeRequest", {
-          name: this.name,
-          email: this.email,
-          company: this.company,
-          position: this.position,
-          notes: this.notes
+          name: this.data.name,
+          email: this.data.email,
+          company: this.data.company,
+          position: this.data.position,
+          notes: this.data.notes
         })
         .then(function(response) {
           console.log(response);
         })
         .catch(function(error) {
           console.log(error);
-        });
+        }); */
     }
   },
   mounted() {}

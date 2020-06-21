@@ -2312,20 +2312,25 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    sendRequest: function sendRequest() {
+    sendRequest: function sendRequest(data) {
       //validate
       //make post request to /resumeRequest
-      axios.post("/resumeRequest", {
-        name: this.name,
-        email: this.email,
-        company: this.company,
-        position: this.position,
-        notes: this.notes
-      }).then(function (response) {
-        console.log(response);
-      })["catch"](function (error) {
-        console.log(error);
-      });
+      //TODO: FINISH DEBUGGING ERROR WITH PERSISTING MESSAGE
+      console.log(data);
+      /* axios
+        .post("/resumeRequest", {
+          name: this.data.name,
+          email: this.data.email,
+          company: this.data.company,
+          position: this.data.position,
+          notes: this.data.notes
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        }); */
     }
   },
   mounted: function mounted() {}
@@ -40361,15 +40366,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************!*\
   !*** ./resources/js/views/Resume.vue ***!
   \***************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Resume_vue_vue_type_template_id_d56eb8e8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Resume.vue?vue&type=template&id=d56eb8e8&scoped=true& */ "./resources/js/views/Resume.vue?vue&type=template&id=d56eb8e8&scoped=true&");
 /* harmony import */ var _Resume_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Resume.vue?vue&type=script&lang=js& */ "./resources/js/views/Resume.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Resume_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Resume_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Resume_vue_vue_type_style_index_0_id_d56eb8e8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Resume.vue?vue&type=style&index=0&id=d56eb8e8&scoped=true&lang=css& */ "./resources/js/views/Resume.vue?vue&type=style&index=0&id=d56eb8e8&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Resume_vue_vue_type_style_index_0_id_d56eb8e8_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Resume.vue?vue&type=style&index=0&id=d56eb8e8&scoped=true&lang=css& */ "./resources/js/views/Resume.vue?vue&type=style&index=0&id=d56eb8e8&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -40401,7 +40405,7 @@ component.options.__file = "resources/js/views/Resume.vue"
 /*!****************************************************************!*\
   !*** ./resources/js/views/Resume.vue?vue&type=script&lang=js& ***!
   \****************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
