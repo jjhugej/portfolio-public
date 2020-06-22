@@ -2312,6 +2312,7 @@ __webpack_require__.r(__webpack_exports__);
       company: "",
       position: "",
       notes: "",
+      errors: [],
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content")
     };
   },
@@ -2328,7 +2329,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         console.log(response);
       })["catch"](function (error) {
-        console.log(error);
+        console.log(error.response.data.errors);
       });
     }
   },

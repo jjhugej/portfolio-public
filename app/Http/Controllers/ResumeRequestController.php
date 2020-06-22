@@ -45,10 +45,23 @@ class ResumeRequestController extends Controller
             'notes' => 'nullable|max:2000',
         ]);
 
-        $resumeRequest = ResumeRequest::create($request->all());
+        $resumeRequest = ResumeRequest::create($validatedData);
                 
-        return ['success' => true, 'message' => 'todo item created','storedItem' => $resumeRequest];
+        return ['success' => true, 'message' => 'request accepted','requestData' => $resumeRequest];
         //return ["sucess", $resumeRequest];
+        /*
+            $validator = Validator::make(...);
+
+$validator->after(function ($validator) {
+    if ($this->somethingElseIsInvalid()) {
+        $validator->errors()->add('field', 'Something is wrong with this field!');
+    }
+});
+
+if ($validator->fails()) {
+    //
+}
+        */
     }
 
     /**

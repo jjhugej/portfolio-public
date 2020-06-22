@@ -78,6 +78,7 @@ export default {
       company: "",
       position: "",
       notes: "",
+      errors: [],
       csrf: document
         .querySelector('meta[name="csrf-token"]')
         .getAttribute("content")
@@ -100,7 +101,7 @@ export default {
           console.log(response);
         })
         .catch(function(error) {
-          console.log(error);
+          console.log(error.response.data.errors);
         });
     }
   },
