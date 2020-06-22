@@ -2304,6 +2304,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2312,12 +2316,14 @@ __webpack_require__.r(__webpack_exports__);
       company: "",
       position: "",
       notes: "",
-      errors: [],
+      errors: {},
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content")
     };
   },
   methods: {
     sendRequest: function sendRequest() {
+      var _this = this;
+
       //validate
       //make post request to /resumeRequest
       axios.post("/resumerequest", {
@@ -2330,6 +2336,7 @@ __webpack_require__.r(__webpack_exports__);
         console.log(response);
       })["catch"](function (error) {
         console.log(error.response.data.errors);
+        _this.errors = error.response.data.errors;
       });
     }
   },
@@ -24137,7 +24144,13 @@ var render = function() {
                       _vm.name = $event.target.value
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.errors.name
+                  ? _c("p", { staticClass: "has-text-danger" }, [
+                      _vm._v(_vm._s(_vm.errors.name[0]))
+                    ])
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -24169,7 +24182,13 @@ var render = function() {
                       _vm.email = $event.target.value
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.errors.email
+                  ? _c("p", { staticClass: "has-text-danger" }, [
+                      _vm._v(_vm._s(_vm.errors.email[0]))
+                    ])
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -24201,7 +24220,13 @@ var render = function() {
                       _vm.company = $event.target.value
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.errors.company
+                  ? _c("p", { staticClass: "has-text-danger" }, [
+                      _vm._v(_vm._s(_vm.errors.company[0]))
+                    ])
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),
@@ -24233,7 +24258,13 @@ var render = function() {
                       _vm.position = $event.target.value
                     }
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm.errors.position
+                  ? _c("p", { staticClass: "has-text-danger" }, [
+                      _vm._v(_vm._s(_vm.errors.position[0]))
+                    ])
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),

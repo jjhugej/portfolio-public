@@ -15,6 +15,7 @@
                 type="text"
                 placeholder="e.g. Alex Smith"
               />
+              <p v-if="errors.name" class="has-text-danger">{{errors.name[0]}}</p>
             </div>
           </div>
           <div class="field">
@@ -27,6 +28,7 @@
                 type="email"
                 placeholder="alexsmith@gmail.com"
               />
+              <p v-if="errors.email" class="has-text-danger">{{errors.email[0]}}</p>
             </div>
           </div>
           <div class="field">
@@ -39,6 +41,7 @@
                 type="text"
                 placeholder="Alex Smith's startup"
               />
+              <p v-if="errors.company" class="has-text-danger">{{errors.company[0]}}</p>
             </div>
           </div>
           <div class="field">
@@ -51,6 +54,7 @@
                 type="text"
                 placeholder="C.T.O."
               />
+              <p v-if="errors.position" class="has-text-danger">{{errors.position[0]}}</p>
             </div>
           </div>
           <div class="field">
@@ -78,7 +82,7 @@ export default {
       company: "",
       position: "",
       notes: "",
-      errors: [],
+      errors: {},
       csrf: document
         .querySelector('meta[name="csrf-token"]')
         .getAttribute("content")
@@ -100,8 +104,9 @@ export default {
         .then(function(response) {
           console.log(response);
         })
-        .catch(function(error) {
+        .catch(error => {
           console.log(error.response.data.errors);
+          this.errors = error.response.data.errors;
         });
     }
   },
