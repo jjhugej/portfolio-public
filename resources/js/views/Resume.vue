@@ -4,63 +4,66 @@
       <h1 class="has-text-centered">Request My Resume</h1>
       <h2 class="has-text-centered">Let's get to know each other</h2>
       <div class="form-wrapper container">
-        <div class="field">
-          <label for="name" class="label">Name</label>
-          <div class="control">
-            <input
-              v-model="name"
-              name="name"
-              class="input"
-              type="text"
-              placeholder="e.g. Alex Smith"
-            />
+        <form v-on:submit.prevent>
+          <div class="field">
+            <label for="name" class="label">Name</label>
+            <div class="control">
+              <input
+                v-model="name"
+                name="name"
+                class="input"
+                type="text"
+                placeholder="e.g. Alex Smith"
+              />
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control">
-            <input
-              v-model="email"
-              name="email"
-              class="input"
-              type="email"
-              placeholder="alexsmith@gmail.com"
-            />
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input
+                v-model="email"
+                name="email"
+                class="input"
+                type="email"
+                placeholder="alexsmith@gmail.com"
+              />
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Company</label>
-          <div class="control">
-            <input
-              v-model="company"
-              name="company"
-              class="input"
-              type="text"
-              placeholder="Alex Smith's startup"
-            />
+          <div class="field">
+            <label class="label">Company</label>
+            <div class="control">
+              <input
+                v-model="company"
+                name="company"
+                class="input"
+                type="text"
+                placeholder="Alex Smith's startup"
+              />
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Your position</label>
-          <div class="control">
-            <input
-              v-model="position"
-              name="position"
-              class="input"
-              type="text"
-              placeholder="C.T.O."
-            />
+          <div class="field">
+            <label class="label">Your position</label>
+            <div class="control">
+              <input
+                v-model="position"
+                name="position"
+                class="input"
+                type="text"
+                placeholder="C.T.O."
+              />
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Tell me about your company</label>
-          <div class="control">
-            <textarea v-model="notes" name="notes" class="textarea"></textarea>
+          <div class="field">
+            <label class="label">Tell me about your company</label>
+            <div class="control">
+              <textarea v-model="notes" name="notes" class="textarea"></textarea>
+            </div>
           </div>
-        </div>
-        <div class="control">
-          <button v-on:click="sendRequest" class="button is-primary">Submit</button>
-        </div>
+          <input type="hidden" name="_token" :value="csrf" />
+          <div class="control">
+            <button v-on:click="sendRequest" class="button is-primary">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -74,29 +77,31 @@ export default {
       email: "",
       company: "",
       position: "",
-      notes: ""
+      notes: "",
+      csrf: document
+        .querySelector('meta[name="csrf-token"]')
+        .getAttribute("content")
     };
   },
   methods: {
-    sendRequest: function(data) {
+    sendRequest: function() {
       //validate
       //make post request to /resumeRequest
-      //TODO: FINISH DEBUGGING ERROR WITH PERSISTING MESSAGE
-      console.log(data);
-      /* axios
-        .post("/resumeRequest", {
-          name: this.data.name,
-          email: this.data.email,
-          company: this.data.company,
-          position: this.data.position,
-          notes: this.data.notes
+
+      axios
+        .post("/resumerequest", {
+          name: this.name,
+          email: this.email,
+          company: this.company,
+          position: this.position,
+          notes: this.notes
         })
         .then(function(response) {
           console.log(response);
         })
         .catch(function(error) {
           console.log(error);
-        }); */
+        });
     }
   },
   mounted() {}

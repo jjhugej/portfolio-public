@@ -2301,6 +2301,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2308,29 +2311,25 @@ __webpack_require__.r(__webpack_exports__);
       email: "",
       company: "",
       position: "",
-      notes: ""
+      notes: "",
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content")
     };
   },
   methods: {
-    sendRequest: function sendRequest(data) {
+    sendRequest: function sendRequest() {
       //validate
       //make post request to /resumeRequest
-      //TODO: FINISH DEBUGGING ERROR WITH PERSISTING MESSAGE
-      console.log(data);
-      /* axios
-        .post("/resumeRequest", {
-          name: this.data.name,
-          email: this.data.email,
-          company: this.data.company,
-          position: this.data.position,
-          notes: this.data.notes
-        })
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        }); */
+      axios.post("/resumerequest", {
+        name: this.name,
+        email: this.email,
+        company: this.company,
+        position: this.position,
+        notes: this.notes
+      }).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   },
   mounted: function mounted() {}
@@ -24097,172 +24096,193 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-wrapper container" }, [
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label", attrs: { for: "name" } }, [
-            _vm._v("Name")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label", attrs: { for: "name" } }, [
+                _vm._v("Name")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "input",
+                  attrs: {
+                    name: "name",
+                    type: "text",
+                    placeholder: "e.g. Alex Smith"
+                  },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.email,
+                      expression: "email"
+                    }
+                  ],
+                  staticClass: "input",
+                  attrs: {
+                    name: "email",
+                    type: "email",
+                    placeholder: "alexsmith@gmail.com"
+                  },
+                  domProps: { value: _vm.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.email = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Company")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.company,
+                      expression: "company"
+                    }
+                  ],
+                  staticClass: "input",
+                  attrs: {
+                    name: "company",
+                    type: "text",
+                    placeholder: "Alex Smith's startup"
+                  },
+                  domProps: { value: _vm.company },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.company = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Your position")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.position,
+                      expression: "position"
+                    }
+                  ],
+                  staticClass: "input",
+                  attrs: {
+                    name: "position",
+                    type: "text",
+                    placeholder: "C.T.O."
+                  },
+                  domProps: { value: _vm.position },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.position = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [
+                _vm._v("Tell me about your company")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.notes,
+                      expression: "notes"
+                    }
+                  ],
+                  staticClass: "textarea",
+                  attrs: { name: "notes" },
+                  domProps: { value: _vm.notes },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.notes = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
             _c("input", {
-              directives: [
+              attrs: { type: "hidden", name: "_token" },
+              domProps: { value: _vm.csrf }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "control" }, [
+              _c(
+                "button",
                 {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.name,
-                  expression: "name"
-                }
-              ],
-              staticClass: "input",
-              attrs: {
-                name: "name",
-                type: "text",
-                placeholder: "e.g. Alex Smith"
-              },
-              domProps: { value: _vm.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.name = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Email")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              staticClass: "input",
-              attrs: {
-                name: "email",
-                type: "email",
-                placeholder: "alexsmith@gmail.com"
-              },
-              domProps: { value: _vm.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.email = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Company")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.company,
-                  expression: "company"
-                }
-              ],
-              staticClass: "input",
-              attrs: {
-                name: "company",
-                type: "text",
-                placeholder: "Alex Smith's startup"
-              },
-              domProps: { value: _vm.company },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.company = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [_vm._v("Your position")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.position,
-                  expression: "position"
-                }
-              ],
-              staticClass: "input",
-              attrs: { name: "position", type: "text", placeholder: "C.T.O." },
-              domProps: { value: _vm.position },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.position = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "field" }, [
-          _c("label", { staticClass: "label" }, [
-            _vm._v("Tell me about your company")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
-            _c("textarea", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.notes,
-                  expression: "notes"
-                }
-              ],
-              staticClass: "textarea",
-              attrs: { name: "notes" },
-              domProps: { value: _vm.notes },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.notes = $event.target.value
-                }
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "control" }, [
-          _c(
-            "button",
-            {
-              staticClass: "button is-primary",
-              on: { click: _vm.sendRequest }
-            },
-            [_vm._v("Submit")]
-          )
-        ])
+                  staticClass: "button is-primary",
+                  on: { click: _vm.sendRequest }
+                },
+                [_vm._v("Submit")]
+              )
+            ])
+          ]
+        )
       ])
     ])
   ])

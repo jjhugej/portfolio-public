@@ -34,10 +34,9 @@ class ResumeRequestController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        /* dd($request); */
-        /* return ['its working',$request]; */
-
+    {        
+        
+        // Validate
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required | email',
@@ -45,15 +44,11 @@ class ResumeRequestController extends Controller
             'position' => 'required',
             'notes' => 'nullable|max:2000',
         ]);
-        $resumeRequest = ResumeRequest::create($validatedData);
-        
-        //$resumeRequest->save();
 
-        //TODO: FINISH PERSISTING TO DB and VALIDATE DATA ON FRONTEND AS WELL
-        //ResumeRequest::create();
-
-
-
+        $resumeRequest = ResumeRequest::create($request->all());
+                
+        return ['success' => true, 'message' => 'todo item created','storedItem' => $resumeRequest];
+        //return ["sucess", $resumeRequest];
     }
 
     /**

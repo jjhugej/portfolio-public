@@ -21,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/resumeRequest', 'ResumeRequestController@store')->name('home');
+Route::post('/resumerequest', 'ResumeRequestController@store');

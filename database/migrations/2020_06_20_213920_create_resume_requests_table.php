@@ -18,8 +18,8 @@ class CreateResumeRequestsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('company');
-            $table->string('postion');
-            $table->text('notes');
+            $table->string('position');
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }
