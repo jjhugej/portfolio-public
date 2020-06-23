@@ -52,7 +52,7 @@
                 name="position"
                 class="input"
                 type="text"
-                placeholder="C.T.O."
+                placeholder="Recruiter"
               />
               <p v-if="errors.position" class="has-text-danger">{{errors.position[0]}}</p>
             </div>
@@ -65,7 +65,11 @@
           </div>
           <input type="hidden" name="_token" :value="csrf" />
           <div class="control">
-            <button v-on:click="sendRequest" class="button is-primary">Submit</button>
+            <button
+              :disabled="btnDisabled"
+              v-on:click="sendRequest"
+              class="button is-primary"
+            >{{btnText}}</button>
           </div>
         </form>
       </div>
@@ -82,6 +86,8 @@ export default {
       company: "",
       position: "",
       notes: "",
+      btnDisabled: false,
+      btnText: "Submit",
       errors: {},
       csrf: document
         .querySelector('meta[name="csrf-token"]')
@@ -101,8 +107,15 @@ export default {
           position: this.position,
           notes: this.notes
         })
-        .then(function(response) {
-          console.log(response);
+        .then(response => {
+          EventBus.$emit("resumeRequestSubmitted"); //TODO CATCH EMIT AND GIVE FEEDBACK TO USER
+          this.btnDisabled = "true";
+          this.btnText = "Submitted!";
+          this.name = "";
+          this.email = "";
+          this.company = "";
+          this.position = "";
+          this.notes = "";
         })
         .catch(error => {
           console.log(error.response.data.errors);

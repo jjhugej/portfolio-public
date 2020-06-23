@@ -1,5 +1,7 @@
 require("./bootstrap");
 import router from "./routes";
+import EventBus from "./event-bus";
+window.EventBus = EventBus;
 
 const files = require.context("./", true, /\.vue$/i);
 files.keys().map(key =>
