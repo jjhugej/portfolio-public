@@ -2262,7 +2262,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -2371,6 +2370,7 @@ __webpack_require__.r(__webpack_exports__);
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content")
     };
   },
+  computed: {},
   methods: {
     sendRequest: function sendRequest() {
       var _this = this;
@@ -2568,7 +2568,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nh1[data-v-1d91a851] {\r\n  font-size: 40px;\r\n  font-weight: 200;\r\n  margin-bottom: 20px;\n}\nh2[data-v-1d91a851] {\r\n  font-size: 26px;\r\n  font-weight: 300;\n}\r\n", ""]);
+exports.push([module.i, "\nh1[data-v-1d91a851] {\r\n  font-size: 40px;\r\n  font-weight: 200;\r\n  margin-bottom: 20px;\n}\nh2[data-v-1d91a851] {\r\n  font-size: 24px;\r\n  font-weight: 300;\n}\r\n", ""]);
 
 // exports
 
@@ -2587,7 +2587,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.project-wrapper[data-v-f7b760ce] {\r\n  padding: 0 80px;\n}\nh1[data-v-f7b760ce] {\r\n  font-size: 30px;\r\n  color: #636b6f;\r\n  font-weight: 300;\n}\nh2[data-v-f7b760ce] {\r\n  font-weight: 600;\n}\n.content-indent[data-v-f7b760ce] {\r\n  padding-left: 20px;\n}\n.content-wrapper[data-v-f7b760ce] {\r\n  margin: 10px 0;\n}\n.tech-wrapper[data-v-f7b760ce] {\r\n  display: flex;\r\n  margin: 10px 0;\n}\n.tech-list[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\nspan[data-v-f7b760ce] {\r\n  padding: 0 10px;\r\n  margin: 0 2px;\r\n  border: solid 1px rgb(133, 230, 243);\r\n  border-radius: 10px;\n}\n.summary-wrapper[data-v-f7b760ce] {\n}\n.summary-wrapper > p[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\r\n", ""]);
+exports.push([module.i, "\n.project-wrapper[data-v-f7b760ce] {\r\n  padding: 0 80px;\n}\nh1[data-v-f7b760ce] {\r\n  font-size: 30px;\r\n  color: #636b6f;\r\n  font-weight: 300;\n}\nh2[data-v-f7b760ce] {\r\n  font-weight: 600;\n}\n.content-indent[data-v-f7b760ce] {\n}\n.content-wrapper[data-v-f7b760ce] {\r\n  margin: 10px 0;\n}\n.tech-wrapper[data-v-f7b760ce] {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  margin: 10px 0;\n}\n.tech-list[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\nspan[data-v-f7b760ce] {\r\n  padding: 0 10px;\r\n  border: solid 1px rgb(133, 230, 243);\r\n  border-radius: 10px;\n}\n.summary-wrapper[data-v-f7b760ce] {\n}\n.summary-wrapper > p[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\r\n", ""]);
 
 // exports
 
@@ -24146,7 +24146,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("span", [_vm._v("Jquery")]),
                 _vm._v(" "),
-                _c("span", [_vm._v("Sass (custom)")]),
+                _c("span", [_vm._v("Sass")]),
                 _vm._v(" "),
                 _c("span", [_vm._v("MySQL")])
               ])
@@ -24185,9 +24185,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("span", [_vm._v("CSS")]),
                 _vm._v(" "),
-                _c("span", [_vm._v("Javascript")]),
-                _vm._v(" "),
-                _c("span", [_vm._v("MySQL")])
+                _c("span", [_vm._v("Javascript")])
               ])
             ]),
             _vm._v(" "),
@@ -39860,7 +39858,7 @@ _routes__WEBPACK_IMPORTED_MODULE_0__["default"].beforeEach(function (to, from, n
 _routes__WEBPACK_IMPORTED_MODULE_0__["default"].afterEach(function (to, from, next) {
   setTimeout(function () {
     return app.loading = false;
-  }, 500); // timeout for demo purposes
+  }, 600);
 });
 
 /***/ }),

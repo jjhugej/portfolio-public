@@ -94,6 +94,7 @@ export default {
         .getAttribute("content")
     };
   },
+  computed: {},
   methods: {
     sendRequest: function() {
       //validate

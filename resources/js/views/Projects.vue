@@ -61,7 +61,7 @@
             <div class="tech-list">
               <span>Laravel</span>
               <span>Jquery</span>
-              <span>Sass (custom)</span>
+              <span>Sass</span>
               <span>MySQL</span>
             </div>
           </div>
@@ -87,7 +87,6 @@
               <span>HTML</span>
               <span>CSS</span>
               <span>Javascript</span>
-              <span>MySQL</span>
             </div>
           </div>
           <div class="content-wrapper links-wrapper">
@@ -127,13 +126,13 @@ h2 {
   font-weight: 600;
 }
 .content-indent {
-  padding-left: 20px;
 }
 .content-wrapper {
   margin: 10px 0;
 }
 .tech-wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px 0;
 }
 .tech-list {
@@ -141,7 +140,6 @@ h2 {
 }
 span {
   padding: 0 10px;
-  margin: 0 2px;
   border: solid 1px rgb(133, 230, 243);
   border-radius: 10px;
 }
