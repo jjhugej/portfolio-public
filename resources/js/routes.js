@@ -2,6 +2,10 @@ import VueRouter from "vue-router";
 
 let routes = [
     {
+        path: "/",
+        redirect: "/skills"
+    },
+    {
         path: "/skills",
         component: require("./views/Skills.vue").default
     },

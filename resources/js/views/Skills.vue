@@ -35,8 +35,8 @@
               <p>Bootstrap</p>
             </div>
             <div class="text-and-icon-wrapper">
-              <i>
-                <span class="iconify" data-icon="logos-bulma" data-inline="false"></span>
+              <i id="bulma-icon">
+                <span class="iconify" data-icon="simple-icons:bulma" data-inline="false"></span>
               </i>
               <p>Bulma</p>
             </div>
@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  mounted() {}
+  mounted() {},
 };
 </script>
 
@@ -89,5 +89,38 @@ p {
 }
 .column-container {
   padding: 25px;
+}
+#other-skills-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#other-skills {
+  width: 50%;
+}
+#bulma-icon {
+  margin-left: -6px;
+}
+@media only screen and (max-width: 700px) {
+  .column {
+    padding: 0;
+  }
+  .column-container {
+    padding: 0;
+  }
+  #other-skills {
+    width: 100%;
+  }
+  #other-skills-wrapper {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  #other-skills {
+    width: 80%;
+  }
+  #other-skills-wrapper {
+    width: 100%;
+  }
 }
 </style>

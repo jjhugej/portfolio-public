@@ -6,7 +6,7 @@
         <nav-bar></nav-bar>
         <div id="content-display">
             <loading-icon v-if="$root.loading"></loading-icon>
-            <success-message></success-message>
+            <alert-message></alert-message>
             <router-view v-if="!$root.loading"></router-view>     
         </div>  
     </div>

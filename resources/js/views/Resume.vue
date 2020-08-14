@@ -79,7 +79,7 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
       name: "",
       email: "",
@@ -91,12 +91,12 @@ export default {
       errors: {},
       csrf: document
         .querySelector('meta[name="csrf-token"]')
-        .getAttribute("content")
+        .getAttribute("content"),
     };
   },
   computed: {},
   methods: {
-    sendRequest: function() {
+    sendRequest: function () {
       //validate
       //make post request to /resumeRequest
 
@@ -106,10 +106,10 @@ export default {
           email: this.email,
           company: this.company,
           position: this.position,
-          notes: this.notes
+          notes: this.notes,
         })
-        .then(response => {
-          EventBus.$emit("resumeRequestSubmitted"); //TODO CATCH EMIT AND GIVE FEEDBACK TO USER
+        .then((response) => {
+          EventBus.$emit("resumeRequestSubmitted");
           this.btnDisabled = "true";
           this.btnText = "Submitted!";
           this.name = "";
@@ -118,13 +118,12 @@ export default {
           this.position = "";
           this.notes = "";
         })
-        .catch(error => {
-          console.log(error.response.data.errors);
+        .catch((error) => {
           this.errors = error.response.data.errors;
         });
-    }
+    },
   },
-  mounted() {}
+  mounted() {},
 };
 </script>
 
@@ -138,10 +137,16 @@ h2 {
   font-weight: 300;
 }
 .form-wrapper {
+  margin-top: 30px;
   width: 50vw;
 }
 textarea {
   width: 100%;
   height: 20vh;
+}
+@media only screen and (max-width: 700px) {
+  .form-wrapper {
+    width: 80vw;
+  }
 }
 </style>

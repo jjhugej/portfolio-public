@@ -10,15 +10,15 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
-      isVisible: false
+      isVisible: false,
     };
   },
   methods: {
-    closeMessage: function() {
+    closeMessage: function () {
       this.isVisible = false;
-    }
+    },
   },
   created() {},
   mounted() {
@@ -26,7 +26,7 @@ export default {
       this.isVisible = true;
       setTimeout(() => (this.isVisible = false), 9000);
     });
-  }
+  },
 };
 </script>
 <style scoped>
