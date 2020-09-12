@@ -27,14 +27,14 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
+            <p>An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features.</p>
             <a v-if="!showPuppyProjectSummary" @click="togglePuppyProjectSummary">
-              Show Summary
+              Show More
               <i class="fas fa-caret-down"></i>
             </a>
             <div class="summary-div" v-if="showPuppyProjectSummary">
-              <p>An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features.</p>
               <ul class="summary-list">
-                <p>Technical Objectives:</p>
+                <p>Objectives:</p>
                 <li>Create an API using Laravel</li>
                 <li>Use Laravel's Sanctum package for user authentication</li>
                 <li>Consume the API using the Axios package</li>
@@ -51,7 +51,7 @@
               >*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on github is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.</p>
             </div>
             <a v-if="showPuppyProjectSummary" @click="togglePuppyProjectSummary">
-              Hide Summary
+              Show Less
               <i class="fas fa-caret-up"></i>
             </a>
           </div>
@@ -82,23 +82,22 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
+            <p>A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript.</p>
             <a v-if="!showEveStationTraderSummary" @click="toggleEveStationTraderSummary">
-              Show Summary
+              Show More
               <i class="fas fa-caret-down"></i>
             </a>
             <p v-if="showEveStationTraderSummary"></p>
             <div class="summary-div" v-if="showEveStationTraderSummary">
-              <p>A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript.</p>
-
               <ul class="summary-list">
-                <p>Technical Objectives:</p>
+                <p>Objectives:</p>
                 <li>Authenticate users using Laravel's built in authentication system.</li>
                 <li>Allow users to link their Eve Online account to the application</li>
                 <li>Use the Eve Online's Oauth system in order to receive access/refresh tokens for users</li>
                 <li>Fetch user's in-game data and dynamically update the application accordingly</li>
                 <li>Allow users to easily account for all costs of in-game transactions and plan for future costs</li>
               </ul>
-              <p>This project was for a game that I played called Eve Online. This was also the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety.</p>
+              <p>This application is for a game called Eve Online. This was the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety.</p>
               <p>The overarching goal of the project was to allow players of the MMORPG to easily track their assets, production costs, logistics costs, and all relevant market and broker fees.</p>
               <p>The entirety of the feature list is predicated upon the successful authentication of the application's users with their respective Eve Online accounts. Eve uses an OAuth authentication flow with access tokens that lasted 20 minutes, and refresh tokens used to grab new access tokens after they expire. In order to accomplish this I decided to make a "master controller" that I named EveBaseController. This controller was to be extended by every other controller, and the EveBaseController would extend Laravel's base Controller class. This gave me access to all of the out-of-the-box functionality provided by the base Laravel controller, and provided me with a layer of abstraction for interacting with Eve's OAuth flow. While this worked fine at first, my biggest mistake was using this EveBaseController as a catch-all controller for anything else that would be critical for the entire application, even if it didn't have anything to do with authenticating users. Quickly the controller became clunky and unmanageable. This mistake broke the 1st rule of the S.O.L.I.D. principles.</p>
               <p>The next mistake made early on in development was creating base level controllers for each top level controller (ex. MarketController extends a MarketBaseController). Initially this strictly served as a way to tuck away voluminous methods and hide them behind expressive function names. This was not a complete failure as my top level controllers were much easier to read, and the underlying logic was easy to find. This seemed like a solid way to abstract pieces of functionality, at least at first.</p>
@@ -106,7 +105,7 @@
               <p>As the project grew I knew that my architectural mistakes would warrant a rewrite from the ground up. This project has served as one of the best learning experiences in my development career thus far. The rewrite will rectify the unmaintainability on the backend and will change the project from a standard PHP application to a single page application.</p>
             </div>
             <a v-if="showEveStationTraderSummary" @click="toggleEveStationTraderSummary">
-              Hide Summary
+              Show Less
               <i class="fas fa-caret-up"></i>
             </a>
           </div>
@@ -137,15 +136,29 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
+            <p>A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript.</p>
             <a v-if="!showSeluTechSummary" @click="toggleSeluTechSummarySummary">
-              Show Summary
+              Show More
               <i class="fas fa-caret-down"></i>
             </a>
-            <p
-              v-if="showSeluTechSummary"
-            >A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript.</p>
+
+            <div class="summary-div" v-if="showSeluTechSummary">
+              <ul class="summary-list">
+                <p>Objectives:</p>
+                <li>Design and create custom SVG images</li>
+                <li>Design and create a custom icon</li>
+                <li>Use jquery for simple DOM manipulation</li>
+                <li>Use SCSS to compartmentalize CSS</li>
+                <li>Create a fully responsive website with custom breakpoint styling</li>
+              </ul>
+              <p>The goal of this project was to sharpen my skills with SCSS and to learn how to custom design things like SVG images, logos, and icons.</p>
+              <p>The first objective was to make a clean and simple website that was fully responsive and looked great at every breakpoint. I opted to not use a framework to assist me with breakpoints as I was too reliant on grid based CSS frameworks like bootstrap. Flexbox was the main tool used for making things responsive, however the display property(among others) of some elements change as the viewport size changes.</p>
+              <p>Next was the design of some of the assets that would be imported into the project. For the Logo and the icon I used Adobe Illustrator. For the SVG elements, and the overall design of the website, I chose Adobe XD.</p>
+              <p>Finally, in order to make the website more dynamic I chose to use jquery to hide/show certain elements based on user input. In order to achieve the automated text scrolling across the landing page I imported a package known as Typed.js.</p>
+              <p>In retrospect I would have opted to use Vue even for the minor DOM manipulation on the website. Vue offers more room for growth, and even in small doses Jquery can become cumbersome. I also did not take full advantage of variables in SCSS which resulted in some code that was repetitive.</p>
+            </div>
             <a v-if="showSeluTechSummary" @click="toggleSeluTechSummarySummary">
-              Hide Summary
+              Show Less
               <i class="fas fa-caret-up"></i>
             </a>
           </div>
@@ -153,7 +166,7 @@
       </div>
       <hr />
       <div class="project-wrapper">
-        <h1>Laravue Todo List</h1>
+        <h1>Laravue To-Do List</h1>
         <div class="content-indent">
           <div class="content-wrapper tech-wrapper">
             <h2>Technologies Used:</h2>
@@ -178,15 +191,26 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
+            <p>A simple to-do list using Laravel, Vue, and Bulma CSS.</p>
             <a v-if="!showLaravueTodoListSummary" @click="toggleLaravueTodoListSummary">
-              Show Summary
+              Show More
               <i class="fas fa-caret-down"></i>
             </a>
-            <p
-              v-if="showLaravueTodoListSummary"
-            >A simple to do list using Laravel on the backend and Vue on the frontend. The styling is done almost completely using the Bulma framework.</p>
+
+            <div class="summary-div" v-if="showLaravueTodoListSummary">
+              <ul class="summary-list">
+                <p>Objectives:</p>
+                <li>Create API endpoints to persist to-do items</li>
+                <li>Authenticate users via the Laravel's out-of-the-box authentication system</li>
+                <li>Style the website using the Bulma CSS framework</li>
+                <li>Integrate Vue into a non-S.P.A. website</li>
+                <li>Use a global event bus in lieu of Vue's standard event flow</li>
+              </ul>
+              <p>This project was started as a way to learn how to integrate Vue into a Laravel application without using the CLI, learn how to break from the traditional event flow in Vue using an event bus, and to familiarize myself with the Bulma framework.</p>
+              <p class="is-italic">*This project was used as a learning tool and is not hosted.</p>
+            </div>
             <a v-if="showLaravueTodoListSummary" @click="toggleLaravueTodoListSummary">
-              Hide Summary
+              Show Less
               <i class="fas fa-caret-up"></i>
             </a>
           </div>
@@ -194,7 +218,7 @@
       </div>
       <hr />
       <div class="project-wrapper">
-        <h1>Bouncing Balls (portfolio concept)</h1>
+        <h1>Bouncing Balls</h1>
         <div class="content-indent">
           <div class="content-wrapper tech-wrapper">
             <h2>Technologies Used:</h2>
@@ -218,15 +242,24 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
+            <p>A simulator that accounts for mass and velocity of randomly generated balls as they slam into one another and bounce around the canvas. Built with JavaScript.</p>
             <a v-if="!showBallSimulatorSummary" @click="toggleBallSimulatorSummary">
-              Show Summary
+              Show More
               <i class="fas fa-caret-down"></i>
             </a>
-            <p
-              v-if="showBallSimulatorSummary"
-            >A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript.</p>
+
+            <div class="summary-div" v-if="showBallSimulatorSummary">
+              <ul class="summary-list">
+                <p>Objectives:</p>
+                <li>Animate randomly generated balls on an HTML canvas</li>
+                <li>Detect collisions between each of the balls</li>
+                <li>Account for mass and velocity of each ball and use the elastic collision formula to move the balls accordingly</li>
+              </ul>
+              <p>This project was a spin off of the very first game I created in javascript: pong. The goal was to simulate 2D physics by having balls(circles) of different sizes bounce into one another. The effect is that a larger ball would have a very small net change in velocity and direction if a smaller ball moving at high speeds collided with it, and vice versa.</p>
+              <p class="is-italic">*This project was used as a learning tool and is not hosted.</p>
+            </div>
             <a v-if="showBallSimulatorSummary" @click="toggleBallSimulatorSummary">
-              Hide Summary
+              Show Less
               <i class="fas fa-caret-up"></i>
             </a>
           </div>

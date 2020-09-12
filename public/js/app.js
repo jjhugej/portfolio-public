@@ -2391,6 +2391,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -24207,21 +24240,21 @@ var render = function() {
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
+              )
+            ]),
+            _vm._v(" "),
             !_vm.showPuppyProjectSummary
               ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
-                  _vm._v("\n            Show Summary\n            "),
+                  _vm._v("\n            Show More\n            "),
                   _c("i", { staticClass: "fas fa-caret-down" })
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showPuppyProjectSummary
               ? _c("div", { staticClass: "summary-div" }, [
-                  _c("p", [
-                    _vm._v(
-                      "An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
-                    )
-                  ]),
-                  _vm._v(" "),
                   _vm._m(3),
                   _vm._v(" "),
                   _c("p", [
@@ -24258,7 +24291,7 @@ var render = function() {
             _vm._v(" "),
             _vm.showPuppyProjectSummary
               ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
-                  _vm._v("\n            Hide Summary\n            "),
+                  _vm._v("\n            Show Less\n            "),
                   _c("i", { staticClass: "fas fa-caret-up" })
                 ])
               : _vm._e()
@@ -24281,9 +24314,15 @@ var render = function() {
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript."
+              )
+            ]),
+            _vm._v(" "),
             !_vm.showEveStationTraderSummary
               ? _c("a", { on: { click: _vm.toggleEveStationTraderSummary } }, [
-                  _vm._v("\n            Show Summary\n            "),
+                  _vm._v("\n            Show More\n            "),
                   _c("i", { staticClass: "fas fa-caret-down" })
                 ])
               : _vm._e(),
@@ -24292,17 +24331,11 @@ var render = function() {
             _vm._v(" "),
             _vm.showEveStationTraderSummary
               ? _c("div", { staticClass: "summary-div" }, [
-                  _c("p", [
-                    _vm._v(
-                      "A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript."
-                    )
-                  ]),
-                  _vm._v(" "),
                   _vm._m(7),
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "This project was for a game that I played called Eve Online. This was also the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety."
+                      "This application is for a game called Eve Online. This was the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety."
                     )
                   ]),
                   _vm._v(" "),
@@ -24340,7 +24373,7 @@ var render = function() {
             _vm._v(" "),
             _vm.showEveStationTraderSummary
               ? _c("a", { on: { click: _vm.toggleEveStationTraderSummary } }, [
-                  _vm._v("\n            Hide Summary\n            "),
+                  _vm._v("\n            Show Less\n            "),
                   _c("i", { staticClass: "fas fa-caret-up" })
                 ])
               : _vm._e()
@@ -24363,24 +24396,58 @@ var render = function() {
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
+              )
+            ]),
+            _vm._v(" "),
             !_vm.showSeluTechSummary
               ? _c("a", { on: { click: _vm.toggleSeluTechSummarySummary } }, [
-                  _vm._v("\n            Show Summary\n            "),
+                  _vm._v("\n            Show More\n            "),
                   _c("i", { staticClass: "fas fa-caret-down" })
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showSeluTechSummary
-              ? _c("p", [
-                  _vm._v(
-                    "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
-                  )
+              ? _c("div", { staticClass: "summary-div" }, [
+                  _vm._m(11),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The goal of this project was to sharpen my skills with SCSS and to learn how to custom design things like SVG images, logos, and icons."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The first objective was to make a clean and simple website that was fully responsive and looked great at every breakpoint. I opted to not use a framework to assist me with breakpoints as I was too reliant on grid based CSS frameworks like bootstrap. Flexbox was the main tool used for making things responsive, however the display property(among others) of some elements change as the viewport size changes."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Next was the design of some of the assets that would be imported into the project. For the Logo and the icon I used Adobe Illustrator. For the SVG elements, and the overall design of the website, I chose Adobe XD."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Finally, in order to make the website more dynamic I chose to use jquery to hide/show certain elements based on user input. In order to achieve the automated text scrolling across the landing page I imported a package known as Typed.js."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In retrospect I would have opted to use Vue even for the minor DOM manipulation on the website. Vue offers more room for growth, and even in small doses Jquery can become cumbersome. I also did not take full advantage of variables in SCSS which resulted in some code that was repetitive."
+                    )
+                  ])
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showSeluTechSummary
               ? _c("a", { on: { click: _vm.toggleSeluTechSummarySummary } }, [
-                  _vm._v("\n            Hide Summary\n            "),
+                  _vm._v("\n            Show Less\n            "),
                   _c("i", { staticClass: "fas fa-caret-up" })
                 ])
               : _vm._e()
@@ -24391,36 +24458,50 @@ var render = function() {
       _c("hr"),
       _vm._v(" "),
       _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("Laravue Todo List")]),
+        _c("h1", [_vm._v("Laravue To-Do List")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(11),
-          _vm._v(" "),
           _vm._m(12),
           _vm._v(" "),
           _vm._m(13),
           _vm._v(" "),
+          _vm._m(14),
+          _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
+            _c("p", [
+              _vm._v("A simple to-do list using Laravel, Vue, and Bulma CSS.")
+            ]),
+            _vm._v(" "),
             !_vm.showLaravueTodoListSummary
               ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
-                  _vm._v("\n            Show Summary\n            "),
+                  _vm._v("\n            Show More\n            "),
                   _c("i", { staticClass: "fas fa-caret-down" })
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showLaravueTodoListSummary
-              ? _c("p", [
-                  _vm._v(
-                    "A simple to do list using Laravel on the backend and Vue on the frontend. The styling is done almost completely using the Bulma framework."
-                  )
+              ? _c("div", { staticClass: "summary-div" }, [
+                  _vm._m(15),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "This project was started as a way to learn how to integrate Vue into a Laravel application without using the CLI, learn how to break from the traditional event flow in Vue using an event bus, and to familiarize myself with the Bulma framework."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "is-italic" }, [
+                    _vm._v(
+                      "*This project was used as a learning tool and is not hosted."
+                    )
+                  ])
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showLaravueTodoListSummary
               ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
-                  _vm._v("\n            Hide Summary\n            "),
+                  _vm._v("\n            Show Less\n            "),
                   _c("i", { staticClass: "fas fa-caret-up" })
                 ])
               : _vm._e()
@@ -24431,36 +24512,52 @@ var render = function() {
       _c("hr"),
       _vm._v(" "),
       _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("Bouncing Balls (portfolio concept)")]),
+        _c("h1", [_vm._v("Bouncing Balls")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(14),
-          _vm._v(" "),
-          _vm._m(15),
-          _vm._v(" "),
           _vm._m(16),
+          _vm._v(" "),
+          _vm._m(17),
+          _vm._v(" "),
+          _vm._m(18),
           _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "A simulator that accounts for mass and velocity of randomly generated balls as they slam into one another and bounce around the canvas. Built with JavaScript."
+              )
+            ]),
+            _vm._v(" "),
             !_vm.showBallSimulatorSummary
               ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
-                  _vm._v("\n            Show Summary\n            "),
+                  _vm._v("\n            Show More\n            "),
                   _c("i", { staticClass: "fas fa-caret-down" })
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showBallSimulatorSummary
-              ? _c("p", [
-                  _vm._v(
-                    "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
-                  )
+              ? _c("div", { staticClass: "summary-div" }, [
+                  _vm._m(19),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "This project was a spin off of the very first game I created in javascript: pong. The goal was to simulate 2D physics by having balls(circles) of different sizes bounce into one another. The effect is that a larger ball would have a very small net change in velocity and direction if a smaller ball moving at high speeds collided with it, and vice versa."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "is-italic" }, [
+                    _vm._v(
+                      "*This project was used as a learning tool and is not hosted."
+                    )
+                  ])
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.showBallSimulatorSummary
               ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
-                  _vm._v("\n            Hide Summary\n            "),
+                  _vm._v("\n            Show Less\n            "),
                   _c("i", { staticClass: "fas fa-caret-up" })
                 ])
               : _vm._e()
@@ -24524,7 +24621,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "summary-list" }, [
-      _c("p", [_vm._v("Technical Objectives:")]),
+      _c("p", [_vm._v("Objectives:")]),
       _vm._v(" "),
       _c("li", [_vm._v("Create an API using Laravel")]),
       _vm._v(" "),
@@ -24594,7 +24691,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("ul", { staticClass: "summary-list" }, [
-      _c("p", [_vm._v("Technical Objectives:")]),
+      _c("p", [_vm._v("Objectives:")]),
       _vm._v(" "),
       _c("li", [
         _vm._v(
@@ -24673,6 +24770,28 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Objectives:")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Design and create custom SVG images")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Design and create a custom icon")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Use jquery for simple DOM manipulation")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Use SCSS to compartmentalize CSS")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Create a fully responsive website with custom breakpoint styling"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
       _c("h2", [_vm._v("Technologies Used:")]),
       _vm._v(" "),
@@ -24710,6 +24829,30 @@ var staticRenderFns = [
       _vm._v("\n          Website:\n          "),
       _c("p", { staticClass: "is-inline-block" }, [
         _vm._v("Learning Project - Not Hosted")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Objectives:")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Create API endpoints to persist to-do items")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Authenticate users via the Laravel's out-of-the-box authentication system"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Style the website using the Bulma CSS framework")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Integrate Vue into a non-S.P.A. website")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("Use a global event bus in lieu of Vue's standard event flow")
       ])
     ])
   },
@@ -24756,6 +24899,24 @@ var staticRenderFns = [
       _vm._v("\n          Website:\n          "),
       _c("p", { staticClass: "is-inline-block" }, [
         _vm._v("Learning Project - Not Hosted")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Objectives:")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Animate randomly generated balls on an HTML canvas")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Detect collisions between each of the balls")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Account for mass and velocity of each ball and use the elastic collision formula to move the balls accordingly"
+        )
       ])
     ])
   }
