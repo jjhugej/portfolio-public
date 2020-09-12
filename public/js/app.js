@@ -2359,6 +2359,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2708,7 +2740,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.project-wrapper[data-v-f7b760ce] {\r\n  padding: 0 80px;\n}\nh1[data-v-f7b760ce] {\r\n  font-size: 30px;\r\n  color: #636b6f;\r\n  font-weight: 300;\n}\nh2[data-v-f7b760ce] {\r\n  font-weight: 600;\n}\n.content-indent[data-v-f7b760ce] {\n}\n.content-wrapper[data-v-f7b760ce] {\r\n  margin: 10px;\n}\n.tech-wrapper[data-v-f7b760ce] {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  margin: 10px;\n}\n.tech-list[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\nspan[data-v-f7b760ce] {\r\n  padding: 0 10px;\r\n  border: solid 1px rgb(133, 230, 243);\r\n  border-radius: 10px;\n}\n.summary-wrapper > p[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\n@media only screen and (max-width: 700px) {\n.project-wrapper[data-v-f7b760ce] {\r\n    padding: 5px;\n}\n.tech-list[data-v-f7b760ce] {\r\n    padding: 0;\n}\nh2[data-v-f7b760ce] {\r\n    flex-basis: 100%;\n}\nspan[data-v-f7b760ce] {\r\n    display: block;\r\n    margin: 5px;\r\n    min-width: 100px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.project-wrapper[data-v-f7b760ce] {\r\n  padding: 0 80px;\n}\nh1[data-v-f7b760ce] {\r\n  font-size: 30px;\r\n  color: #636b6f;\r\n  font-weight: 300;\n}\nh2[data-v-f7b760ce] {\r\n  font-weight: 600;\n}\n.content-indent[data-v-f7b760ce] {\n}\n.content-wrapper[data-v-f7b760ce] {\r\n  margin: 10px;\n}\n.summary-div > *[data-v-f7b760ce] {\r\n  padding: 10px;\n}\n.summary-list > li[data-v-f7b760ce] {\r\n  list-style: inside;\r\n  padding-left: 10px;\n}\n.tech-wrapper[data-v-f7b760ce] {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  margin: 10px;\n}\n.tech-list[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\nspan[data-v-f7b760ce] {\r\n  padding: 0 10px;\r\n  border: solid 1px rgb(133, 230, 243);\r\n  border-radius: 10px;\n}\n.summary-wrapper > p[data-v-f7b760ce] {\r\n  padding-left: 10px;\n}\n@media only screen and (max-width: 700px) {\n.project-wrapper[data-v-f7b760ce] {\r\n    padding: 5px;\n}\n.tech-list[data-v-f7b760ce] {\r\n    padding: 0;\n}\nh2[data-v-f7b760ce] {\r\n    flex-basis: 100%;\n}\nspan[data-v-f7b760ce] {\r\n    display: block;\r\n    margin: 5px;\r\n    min-width: 100px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -24170,6 +24202,8 @@ var render = function() {
           _vm._v(" "),
           _vm._m(1),
           _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
             _vm._v(" "),
@@ -24181,10 +24215,44 @@ var render = function() {
               : _vm._e(),
             _vm._v(" "),
             _vm.showPuppyProjectSummary
-              ? _c("p", [
-                  _vm._v(
-                    "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;\n            Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.\n            Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.\n            Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n            Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.\n          "
-                  )
+              ? _c("div", { staticClass: "summary-div" }, [
+                  _c("p", [
+                    _vm._v(
+                      "An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "This project was conceived as a way to help a local animal shelter while diving deeper into the ecosystems of both Laravel and Vue.js."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The first goal was to create a fully functional API using Laravel. The API functions very similarly to a standard non-SPA Laravel application, with the exception of the authentication flow. In order to solve my authentication issues I decided to forego an OAuth system and instead used Laravel's Sanctum package. Sanctum offered a simple way to authenticate a single page application without the use of tokens. Instead of tokens Sanctum uses the built-in cookie based authentication service that comes out-of-the-box with Laravel. This allowed me to keep the traditional CSRF protection and session authentication."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The second goal was to consume the API with the Axios package and to then use Vue to simplify managing the front end of the application. While Axios' main function is to make AJAX requests cleaner, the best part was the automation of dealing with CSRF tokens. Vue.js on the frontend gave me the level of maintainability I needed on the front end. Vue allowed me to focus more on the business logic instead of constantly having to reach in and out of the DOM to manage application state. In order to further simplify state management I opted to use the VueX centralized state management store."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "is-italic" }, [
+                    _vm._v(
+                      '*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on github is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.'
+                    )
+                  ])
                 ])
               : _vm._e(),
             _vm._v(" "),
@@ -24204,9 +24272,11 @@ var render = function() {
         _c("h1", [_vm._v("Eve Station Trader")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(2),
+          _vm._m(4),
           _vm._v(" "),
-          _vm._m(3),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6),
           _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
@@ -24218,11 +24288,53 @@ var render = function() {
                 ])
               : _vm._e(),
             _vm._v(" "),
+            _vm.showEveStationTraderSummary ? _c("p") : _vm._e(),
+            _vm._v(" "),
             _vm.showEveStationTraderSummary
-              ? _c("p", [
-                  _vm._v(
-                    "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;\n            Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.\n            Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.\n            Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n            Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.\n          "
-                  )
+              ? _c("div", { staticClass: "summary-div" }, [
+                  _c("p", [
+                    _vm._v(
+                      "A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(7),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "This project was for a game that I played called Eve Online. This was also the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The overarching goal of the project was to allow players of the MMORPG to easily track their assets, production costs, logistics costs, and all relevant market and broker fees."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The entirety of the feature list is predicated upon the successful authentication of the application's users with their respective Eve Online accounts. Eve uses an OAuth authentication flow with access tokens that lasted 20 minutes, and refresh tokens used to grab new access tokens after they expire. In order to accomplish this I decided to make a \"master controller\" that I named EveBaseController. This controller was to be extended by every other controller, and the EveBaseController would extend Laravel's base Controller class. This gave me access to all of the out-of-the-box functionality provided by the base Laravel controller, and provided me with a layer of abstraction for interacting with Eve's OAuth flow. While this worked fine at first, my biggest mistake was using this EveBaseController as a catch-all controller for anything else that would be critical for the entire application, even if it didn't have anything to do with authenticating users. Quickly the controller became clunky and unmanageable. This mistake broke the 1st rule of the S.O.L.I.D. principles."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The next mistake made early on in development was creating base level controllers for each top level controller (ex. MarketController extends a MarketBaseController). Initially this strictly served as a way to tuck away voluminous methods and hide them behind expressive function names. This was not a complete failure as my top level controllers were much easier to read, and the underlying logic was easy to find. This seemed like a solid way to abstract pieces of functionality, at least at first."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "The ultimate problem with this architecture is that each component works fine as an individual piece. However, when the time came for the components to communicate with one another I had abstracted away tons of functionality into seperate controllers that had no way of interacting with one another. In the future rewrite I will use a combination of service containers/providers and traits in order to properly abstract functionality that is critical to more than one class."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "As the project grew I knew that my architectural mistakes would warrant a rewrite from the ground up. This project has served as one of the best learning experiences in my development career thus far. The rewrite will rectify the unmaintainability on the backend and will change the project from a standard PHP application to a single page application."
+                    )
+                  ])
                 ])
               : _vm._e(),
             _vm._v(" "),
@@ -24242,9 +24354,11 @@ var render = function() {
         _c("h1", [_vm._v("LillyPad Web Development")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(4),
+          _vm._m(8),
           _vm._v(" "),
-          _vm._m(5),
+          _vm._m(9),
+          _vm._v(" "),
+          _vm._m(10),
           _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
@@ -24259,7 +24373,7 @@ var render = function() {
             _vm.showSeluTechSummary
               ? _c("p", [
                   _vm._v(
-                    "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;\n            Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.\n            Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.\n            Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n            Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.\n          "
+                    "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
                   )
                 ])
               : _vm._e(),
@@ -24280,9 +24394,11 @@ var render = function() {
         _c("h1", [_vm._v("Laravue Todo List")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(6),
+          _vm._m(11),
           _vm._v(" "),
-          _vm._m(7),
+          _vm._m(12),
+          _vm._v(" "),
+          _vm._m(13),
           _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
@@ -24297,7 +24413,7 @@ var render = function() {
             _vm.showLaravueTodoListSummary
               ? _c("p", [
                   _vm._v(
-                    "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;\n            Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.\n            Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.\n            Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n            Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.\n          "
+                    "A simple to do list using Laravel on the backend and Vue on the frontend. The styling is done almost completely using the Bulma framework."
                   )
                 ])
               : _vm._e(),
@@ -24318,9 +24434,11 @@ var render = function() {
         _c("h1", [_vm._v("Bouncing Balls (portfolio concept)")]),
         _vm._v(" "),
         _c("div", { staticClass: "content-indent" }, [
-          _vm._m(8),
+          _vm._m(14),
           _vm._v(" "),
-          _vm._m(9),
+          _vm._m(15),
+          _vm._v(" "),
+          _vm._m(16),
           _vm._v(" "),
           _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
             _c("h2", [_vm._v("Summary:")]),
@@ -24335,7 +24453,7 @@ var render = function() {
             _vm.showBallSimulatorSummary
               ? _c("p", [
                   _vm._v(
-                    "\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;\n            Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.\n            Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.\n            Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.\n            Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.\n          "
+                    "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
                   )
                 ])
               : _vm._e(),
@@ -24394,6 +24512,45 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("a", { attrs: { href: "https://puppyproject.net" } }, [
+        _vm._v("PuppyProject.net")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Technical Objectives:")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Create an API using Laravel")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("Use Laravel's Sanctum package for user authentication")
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Consume the API using the Axios package")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("Use Vue.js to create a fluid single page application")
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Use VueX to manage application state")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Use Laravel's Nova package to quickly create an admin dashboard"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
       _c("h2", [_vm._v("Technologies Used:")]),
       _vm._v(" "),
@@ -24427,6 +24584,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("p", { staticClass: "is-inline-block" }, [_vm._v("In Development")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Technical Objectives:")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Authenticate users using Laravel's built in authentication system."
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Allow users to link their Eve Online account to the application"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Use the Eve Online's Oauth system in order to receive access/refresh tokens for users"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Fetch user's in-game data and dynamically update the application accordingly"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Allow users to easily account for all costs of in-game transactions and plan for future costs"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
       _c("h2", [_vm._v("Technologies Used:")]),
       _vm._v(" "),
@@ -24451,6 +24655,17 @@ var staticRenderFns = [
         _c("a", { attrs: { href: "https://github.com/jjhugej/selutech" } }, [
           _vm._v("jjhugej/selutech")
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("a", { attrs: { href: "https://lillypadwebdev.com/" } }, [
+        _vm._v("lillypadwebdev.com")
       ])
     ])
   },
@@ -24491,6 +24706,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("p", { staticClass: "is-inline-block" }, [
+        _vm._v("Learning Project - Not Hosted")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
       _c("h2", [_vm._v("Technologies Used:")]),
       _vm._v(" "),
@@ -24519,6 +24745,17 @@ var staticRenderFns = [
           },
           [_vm._v("jjhugej/portfolio-ball-simulator")]
         )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("p", { staticClass: "is-inline-block" }, [
+        _vm._v("Learning Project - Not Hosted")
       ])
     ])
   }

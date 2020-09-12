@@ -21,19 +21,35 @@
               >jjhugej/Puppy-Project-Pre-Nova</a>
             </h2>
           </div>
+          <h2 class="content-wrapper links-wrapper">
+            Website:
+            <a href="https://puppyproject.net">PuppyProject.net</a>
+          </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
             <a v-if="!showPuppyProjectSummary" @click="togglePuppyProjectSummary">
               Show Summary
               <i class="fas fa-caret-down"></i>
             </a>
-            <p v-if="showPuppyProjectSummary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.
-              Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.
-              Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.
-            </p>
+            <div class="summary-div" v-if="showPuppyProjectSummary">
+              <p>An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features.</p>
+              <ul class="summary-list">
+                <p>Technical Objectives:</p>
+                <li>Create an API using Laravel</li>
+                <li>Use Laravel's Sanctum package for user authentication</li>
+                <li>Consume the API using the Axios package</li>
+                <li>Use Vue.js to create a fluid single page application</li>
+                <li>Use VueX to manage application state</li>
+                <li>Use Laravel's Nova package to quickly create an admin dashboard</li>
+              </ul>
+              <p>This project was conceived as a way to help a local animal shelter while diving deeper into the ecosystems of both Laravel and Vue.js.</p>
+              <p>The first goal was to create a fully functional API using Laravel. The API functions very similarly to a standard non-SPA Laravel application, with the exception of the authentication flow. In order to solve my authentication issues I decided to forego an OAuth system and instead used Laravel's Sanctum package. Sanctum offered a simple way to authenticate a single page application without the use of tokens. Instead of tokens Sanctum uses the built-in cookie based authentication service that comes out-of-the-box with Laravel. This allowed me to keep the traditional CSRF protection and session authentication.</p>
+              <p>The second goal was to consume the API with the Axios package and to then use Vue to simplify managing the front end of the application. While Axios' main function is to make AJAX requests cleaner, the best part was the automation of dealing with CSRF tokens. Vue.js on the frontend gave me the level of maintainability I needed on the front end. Vue allowed me to focus more on the business logic instead of constantly having to reach in and out of the DOM to manage application state. In order to further simplify state management I opted to use the VueX centralized state management store.</p>
+              <p>The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables.</p>
+              <p
+                class="is-italic"
+              >*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on github is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.</p>
+            </div>
             <a v-if="showPuppyProjectSummary" @click="togglePuppyProjectSummary">
               Hide Summary
               <i class="fas fa-caret-up"></i>
@@ -60,19 +76,35 @@
               <a href="https://github.com/jjhugej/EveStationTrader">jjhugej/EveStationTrader</a>
             </h2>
           </div>
+          <h2 class="content-wrapper links-wrapper">
+            Website:
+            <p class="is-inline-block">In Development</p>
+          </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
             <a v-if="!showEveStationTraderSummary" @click="toggleEveStationTraderSummary">
               Show Summary
               <i class="fas fa-caret-down"></i>
             </a>
-            <p v-if="showEveStationTraderSummary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.
-              Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.
-              Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.
-            </p>
+            <p v-if="showEveStationTraderSummary"></p>
+            <div class="summary-div" v-if="showEveStationTraderSummary">
+              <p>A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript.</p>
+
+              <ul class="summary-list">
+                <p>Technical Objectives:</p>
+                <li>Authenticate users using Laravel's built in authentication system.</li>
+                <li>Allow users to link their Eve Online account to the application</li>
+                <li>Use the Eve Online's Oauth system in order to receive access/refresh tokens for users</li>
+                <li>Fetch user's in-game data and dynamically update the application accordingly</li>
+                <li>Allow users to easily account for all costs of in-game transactions and plan for future costs</li>
+              </ul>
+              <p>This project was for a game that I played called Eve Online. This was also the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety.</p>
+              <p>The overarching goal of the project was to allow players of the MMORPG to easily track their assets, production costs, logistics costs, and all relevant market and broker fees.</p>
+              <p>The entirety of the feature list is predicated upon the successful authentication of the application's users with their respective Eve Online accounts. Eve uses an OAuth authentication flow with access tokens that lasted 20 minutes, and refresh tokens used to grab new access tokens after they expire. In order to accomplish this I decided to make a "master controller" that I named EveBaseController. This controller was to be extended by every other controller, and the EveBaseController would extend Laravel's base Controller class. This gave me access to all of the out-of-the-box functionality provided by the base Laravel controller, and provided me with a layer of abstraction for interacting with Eve's OAuth flow. While this worked fine at first, my biggest mistake was using this EveBaseController as a catch-all controller for anything else that would be critical for the entire application, even if it didn't have anything to do with authenticating users. Quickly the controller became clunky and unmanageable. This mistake broke the 1st rule of the S.O.L.I.D. principles.</p>
+              <p>The next mistake made early on in development was creating base level controllers for each top level controller (ex. MarketController extends a MarketBaseController). Initially this strictly served as a way to tuck away voluminous methods and hide them behind expressive function names. This was not a complete failure as my top level controllers were much easier to read, and the underlying logic was easy to find. This seemed like a solid way to abstract pieces of functionality, at least at first.</p>
+              <p>The ultimate problem with this architecture is that each component works fine as an individual piece. However, when the time came for the components to communicate with one another I had abstracted away tons of functionality into seperate controllers that had no way of interacting with one another. In the future rewrite I will use a combination of service containers/providers and traits in order to properly abstract functionality that is critical to more than one class.</p>
+              <p>As the project grew I knew that my architectural mistakes would warrant a rewrite from the ground up. This project has served as one of the best learning experiences in my development career thus far. The rewrite will rectify the unmaintainability on the backend and will change the project from a standard PHP application to a single page application.</p>
+            </div>
             <a v-if="showEveStationTraderSummary" @click="toggleEveStationTraderSummary">
               Hide Summary
               <i class="fas fa-caret-up"></i>
@@ -99,19 +131,19 @@
               <a href="https://github.com/jjhugej/selutech">jjhugej/selutech</a>
             </h2>
           </div>
+          <h2 class="content-wrapper links-wrapper">
+            Website:
+            <a href="https://lillypadwebdev.com/">lillypadwebdev.com</a>
+          </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
             <a v-if="!showSeluTechSummary" @click="toggleSeluTechSummarySummary">
               Show Summary
               <i class="fas fa-caret-down"></i>
             </a>
-            <p v-if="showSeluTechSummary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.
-              Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.
-              Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.
-            </p>
+            <p
+              v-if="showSeluTechSummary"
+            >A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript.</p>
             <a v-if="showSeluTechSummary" @click="toggleSeluTechSummarySummary">
               Hide Summary
               <i class="fas fa-caret-up"></i>
@@ -140,19 +172,19 @@
               >jjhugej/laravue_todo_list</a>
             </h2>
           </div>
+          <h2 class="content-wrapper links-wrapper">
+            Website:
+            <p class="is-inline-block">Learning Project - Not Hosted</p>
+          </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
             <a v-if="!showLaravueTodoListSummary" @click="toggleLaravueTodoListSummary">
               Show Summary
               <i class="fas fa-caret-down"></i>
             </a>
-            <p v-if="showLaravueTodoListSummary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.
-              Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.
-              Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.
-            </p>
+            <p
+              v-if="showLaravueTodoListSummary"
+            >A simple to do list using Laravel on the backend and Vue on the frontend. The styling is done almost completely using the Bulma framework.</p>
             <a v-if="showLaravueTodoListSummary" @click="toggleLaravueTodoListSummary">
               Hide Summary
               <i class="fas fa-caret-up"></i>
@@ -180,19 +212,19 @@
               >jjhugej/portfolio-ball-simulator</a>
             </h2>
           </div>
+          <h2 class="content-wrapper links-wrapper">
+            Website:
+            <p class="is-inline-block">Learning Project - Not Hosted</p>
+          </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
             <a v-if="!showBallSimulatorSummary" @click="toggleBallSimulatorSummary">
               Show Summary
               <i class="fas fa-caret-down"></i>
             </a>
-            <p v-if="showBallSimulatorSummary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non nunc auctor nibh mollis faucibus eu vel neque. Cras fringilla vestibulum sem, non pellentesque sem mattis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris auctor nec neque ac viverra. Maecenas suscipit maximus laoreet. Ut at erat auctor, tempor ligula quis, volutpat urna. Proin non est neque. Maecenas ac odio dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Sed condimentum, purus eget aliquam suscipit, metus diam aliquet nunc, nec sodales est leo ut dui. Nulla posuere dolor vitae aliquam bibendum. Etiam in euismod nisl. Vivamus erat nulla, tristique ac sapien at, lacinia mollis mi. Mauris vulputate congue tellus ut facilisis. Sed sit amet elit tristique, dapibus elit vitae, pharetra ligula. Nullam ex lorem, blandit eu nibh quis, fermentum pretium nulla. Maecenas bibendum laoreet lobortis. Proin sodales tortor et mauris bibendum hendrerit. Duis vestibulum quam in posuere vestibulum. Nullam vitae tortor id erat hendrerit malesuada eu in diam. Nam ullamcorper mauris nisl, nec commodo leo bibendum sit amet. Donec quis dui nec mi fringilla laoreet.
-              Maecenas ultrices libero blandit massa aliquam semper. Sed condimentum lacinia turpis et venenatis. Vivamus et tincidunt ligula. Cras eu justo sed sem elementum dictum. Nullam tristique posuere libero, at aliquam lectus iaculis vitae. Etiam id sagittis tortor, consectetur accumsan quam. Sed magna orci, luctus non justo quis, auctor convallis orci. Curabitur feugiat tortor sapien, eu malesuada nibh consectetur a. Donec odio tortor, rutrum eget mi in, aliquam luctus ipsum. Nam eget feugiat erat. Vestibulum dapibus a massa vitae rhoncus.
-              Phasellus eu nulla euismod, rutrum nibh ut, commodo dui. Fusce viverra tortor ac sem egestas tempor. Pellentesque posuere nulla leo. Pellentesque convallis ipsum id eros condimentum volutpat. Sed in velit eu purus volutpat faucibus nec vel orci. Morbi vitae quam dolor. Etiam dignissim tristique lacus, ac consectetur est maximus ut. Ut convallis magna malesuada velit aliquet, a semper quam ultricies. Suspendisse sodales, lorem sed convallis accumsan, neque metus rhoncus sem, ut pellentesque tellus ligula id augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Sed scelerisque egestas blandit. Sed eleifend lacus sit amet enim rhoncus, in viverra ligula viverra. Aliquam non augue et dui cursus luctus in vehicula odio. Cras eu ultricies erat. Aliquam feugiat ex non libero pulvinar blandit non efficitur metus. Cras posuere eu est vitae ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent leo arcu, hendrerit ut felis sit amet, feugiat pulvinar arcu. Aliquam eu fermentum ante, id scelerisque est. Nulla ultricies, velit id cursus aliquet, nunc ligula tincidunt dolor, vitae feugiat dui odio in ex. Cras augue leo, blandit id mi in, auctor facilisis nisl. Morbi id pellentesque odio. Nam ligula ligula, posuere at vehicula at, mattis sit amet nibh. Nunc vestibulum arcu a ligula pharetra iaculis.
-            </p>
+            <p
+              v-if="showBallSimulatorSummary"
+            >A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript.</p>
             <a v-if="showBallSimulatorSummary" @click="toggleBallSimulatorSummary">
               Hide Summary
               <i class="fas fa-caret-up"></i>
@@ -254,6 +286,13 @@ h2 {
 }
 .content-wrapper {
   margin: 10px;
+}
+.summary-div > * {
+  padding: 10px;
+}
+.summary-list > li {
+  list-style: inside;
+  padding-left: 10px;
 }
 .tech-wrapper {
   display: flex;
