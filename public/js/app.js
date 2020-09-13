@@ -2108,6 +2108,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {}
 });
@@ -2424,6 +2435,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2436,18 +2448,23 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     togglePuppyProjectSummary: function togglePuppyProjectSummary() {
+      location.href = "#puppyProjectDiv";
       return this.showPuppyProjectSummary = !this.showPuppyProjectSummary;
     },
     toggleEveStationTraderSummary: function toggleEveStationTraderSummary() {
+      location.href = "#eveStationTraderDiv";
       return this.showEveStationTraderSummary = !this.showEveStationTraderSummary;
     },
     toggleLaravueTodoListSummary: function toggleLaravueTodoListSummary() {
+      location.href = "#laravueTodoDiv";
       return this.showLaravueTodoListSummary = !this.showLaravueTodoListSummary;
     },
     toggleSeluTechSummarySummary: function toggleSeluTechSummarySummary() {
+      location.href = "#seluTechDiv";
       return this.showSeluTechSummary = !this.showSeluTechSummary;
     },
     toggleBallSimulatorSummary: function toggleBallSimulatorSummary() {
+      location.href = "#bouncingBallsDiv";
       return this.showBallSimulatorSummary = !this.showBallSimulatorSummary;
     }
   },
@@ -2544,6 +2561,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2554,8 +2573,7 @@ __webpack_require__.r(__webpack_exports__);
       notes: "",
       btnDisabled: false,
       btnText: "Submit",
-      errors: {},
-      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+      errors: {}
     };
   },
   computed: {},
@@ -2563,8 +2581,6 @@ __webpack_require__.r(__webpack_exports__);
     sendRequest: function sendRequest() {
       var _this = this;
 
-      //validate
-      //make post request to /resumeRequest
       axios.post("/resumerequest", {
         name: this.name,
         email: this.email,
@@ -2584,8 +2600,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.errors = error.response.data.errors;
       });
     }
-  },
-  mounted: function mounted() {}
+  }
 });
 
 /***/ }),
@@ -2754,7 +2769,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nh1[data-v-1d91a851] {\r\n  font-size: 40px;\r\n  font-weight: 200;\r\n  margin-bottom: 20px;\n}\nh2[data-v-1d91a851] {\r\n  font-size: 24px;\r\n  font-weight: 300;\n}\r\n", ""]);
+exports.push([module.i, "\nh1[data-v-1d91a851] {\r\n  font-size: 40px;\r\n  font-weight: 200;\r\n  margin-bottom: 20px;\n}\nh2[data-v-1d91a851] {\r\n  font-size: 24px;\r\n  font-weight: 300;\n}\na[data-v-1d91a851] {\r\n  font-size: 60px;\r\n  padding: 30px;\n}\n#github-link[data-v-1d91a851] {\r\n  color: black;\n}\n#linkedin-link[data-v-1d91a851] {\r\n  color: #0077b5;\n}\n#facebook-link[data-v-1d91a851] {\r\n  color: #4267b2;\n}\n#social-media-links[data-v-1d91a851] {\r\n  margin-top: 10vh;\n}\r\n", ""]);
 
 // exports
 
@@ -24151,10 +24166,51 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("section", { staticClass: "section" }, [
-      _c("div", { staticClass: "container has-text-centered" }, [
-        _c("h1", [_vm._v("Shoot me a message")]),
+      _c("div", { staticClass: "container" }, [
+        _c("h1", { staticClass: "has-text-centered" }, [_vm._v("Contact")]),
         _vm._v(" "),
-        _c("h2", [_vm._v("jonlillywebdev@gmail.com")])
+        _c("h2", { staticClass: "has-text-centered" }, [
+          _vm._v("jonlillywebdev@gmail.com")
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "container has-text-centered",
+            attrs: { id: "social-media-links" }
+          },
+          [
+            _c(
+              "a",
+              {
+                attrs: {
+                  id: "linkedin-link",
+                  href: "https://linkedin.com/in/jonathan-lilly-0b08651b3"
+                }
+              },
+              [_c("i", { staticClass: "fab fa-linkedin" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: { id: "github-link", href: "https://github.com/jjhugej" }
+              },
+              [_c("i", { staticClass: "fab fa-github-square" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  id: "facebook-link",
+                  href: "https://www.facebook.com/jonathan.lilly.9465"
+                }
+              },
+              [_c("i", { staticClass: "fab fa-facebook-square" })]
+            )
+          ]
+        )
       ])
     ])
   }
@@ -24227,343 +24283,383 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "section" }, [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("PAWS Animal Shelter")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content-indent" }, [
-          _vm._m(0),
+      _c(
+        "div",
+        { staticClass: "project-wrapper", attrs: { id: "puppyProjectDiv" } },
+        [
+          _c("h1", [_vm._v("PAWS Animal Shelter")]),
           _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
-            _c("h2", [_vm._v("Summary:")]),
+          _c("div", { staticClass: "content-indent" }, [
+            _vm._m(0),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "An S.P.A. web application built for a local animal shelter. Using Laravel and Vue.js this app is feature rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
-              )
-            ]),
+            _vm._m(1),
             _vm._v(" "),
-            !_vm.showPuppyProjectSummary
-              ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
-                  _vm._v("\n            Show More\n            "),
-                  _c("i", { staticClass: "fas fa-caret-down" })
-                ])
-              : _vm._e(),
+            _vm._m(2),
             _vm._v(" "),
-            _vm.showPuppyProjectSummary
-              ? _c("div", { staticClass: "summary-div" }, [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "This project was conceived as a way to help a local animal shelter while diving deeper into the ecosystems of both Laravel and Vue.js."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The first goal was to create a fully functional API using Laravel. The API functions very similarly to a standard non-SPA Laravel application, with the exception of the authentication flow. In order to solve my authentication issues I decided to forego an OAuth system and instead used Laravel's Sanctum package. Sanctum offered a simple way to authenticate a single page application without the use of tokens. Instead of tokens Sanctum uses the built-in cookie based authentication service that comes out-of-the-box with Laravel. This allowed me to keep the traditional CSRF protection and session authentication."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The second goal was to consume the API with the Axios package and to then use Vue to simplify managing the front end of the application. While Axios' main function is to make AJAX requests cleaner, the best part was the automation of dealing with CSRF tokens. Vue.js on the frontend gave me the level of maintainability I needed on the front end. Vue allowed me to focus more on the business logic instead of constantly having to reach in and out of the DOM to manage application state. In order to further simplify state management I opted to use the VueX centralized state management store."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "is-italic" }, [
-                    _vm._v(
-                      '*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on github is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.'
-                    )
+            _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
+              _c("h2", [_vm._v("Summary:")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "A S.P.A. web application that was built for a local animal shelter. Using Laravel and Vue.js this app is feature-rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
+                )
+              ]),
+              _vm._v(" "),
+              !_vm.showPuppyProjectSummary
+                ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
+                    _vm._v("\n            Show More\n            "),
+                    _c("i", { staticClass: "fas fa-caret-down" })
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.showPuppyProjectSummary
-              ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
-                  _vm._v("\n            Show Less\n            "),
-                  _c("i", { staticClass: "fas fa-caret-up" })
-                ])
-              : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showPuppyProjectSummary
+                ? _c("div", { staticClass: "summary-div" }, [
+                    _vm._m(3),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This project was conceived as a way to help a local animal shelter while diving deeper into the ecosystems of both Laravel and Vue.js."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The first goal was to create a fully functional API using Laravel. The API functions similarly to a standard non-SPA Laravel application, except for the authentication flow. To solve my authentication issues I decided to forego an OAuth system and instead used Laravel's Sanctum package. Sanctum offered a simple way to authenticate a single page application without the use of tokens. Instead of tokens Sanctum uses the built-in cookie-based authentication service that comes out-of-the-box with Laravel. This allowed me to keep the traditional CSRF protection and session authentication."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The second goal was to consume the API with the help of the Axios package and then use Vue to simplify managing the front end of the application. While Axios' main function is to make AJAX requests cleaner, the best part was the automation of dealing with CSRF tokens. Vue.js gave me the level of maintainability that I needed on the front end and allowed me to focus more on the business logic instead of constantly having to reach in and out of the DOM to manage application state. To further simplify state management I opted to use the VueX centralized state management store."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "is-italic" }, [
+                      _vm._v(
+                        '*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on GitHub is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.'
+                      )
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showPuppyProjectSummary
+                ? _c("a", { on: { click: _vm.togglePuppyProjectSummary } }, [
+                    _vm._v("\n            Show Less\n            "),
+                    _c("i", { staticClass: "fas fa-caret-up" })
+                  ])
+                : _vm._e()
+            ])
           ])
-        ])
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("Eve Station Trader")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content-indent" }, [
-          _vm._m(4),
+      _c(
+        "div",
+        {
+          staticClass: "project-wrapper",
+          attrs: { id: "eveStationTraderDiv" }
+        },
+        [
+          _c("h1", [_vm._v("Eve Station Trader")]),
           _vm._v(" "),
-          _vm._m(5),
-          _vm._v(" "),
-          _vm._m(6),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
-            _c("h2", [_vm._v("Summary:")]),
+          _c("div", { staticClass: "content-indent" }, [
+            _vm._m(4),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript."
-              )
-            ]),
+            _vm._m(5),
             _vm._v(" "),
-            !_vm.showEveStationTraderSummary
-              ? _c("a", { on: { click: _vm.toggleEveStationTraderSummary } }, [
-                  _vm._v("\n            Show More\n            "),
-                  _c("i", { staticClass: "fas fa-caret-down" })
-                ])
-              : _vm._e(),
+            _vm._m(6),
             _vm._v(" "),
-            _vm.showEveStationTraderSummary ? _c("p") : _vm._e(),
-            _vm._v(" "),
-            _vm.showEveStationTraderSummary
-              ? _c("div", { staticClass: "summary-div" }, [
-                  _vm._m(7),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "This application is for a game called Eve Online. This was the first large scale Laravel application that I had worked on. The project is due for a complete rewrite due to some poor architectural decisions I made early in development that have plagued the project in it's entirety."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The overarching goal of the project was to allow players of the MMORPG to easily track their assets, production costs, logistics costs, and all relevant market and broker fees."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The entirety of the feature list is predicated upon the successful authentication of the application's users with their respective Eve Online accounts. Eve uses an OAuth authentication flow with access tokens that lasted 20 minutes, and refresh tokens used to grab new access tokens after they expire. In order to accomplish this I decided to make a \"master controller\" that I named EveBaseController. This controller was to be extended by every other controller, and the EveBaseController would extend Laravel's base Controller class. This gave me access to all of the out-of-the-box functionality provided by the base Laravel controller, and provided me with a layer of abstraction for interacting with Eve's OAuth flow. While this worked fine at first, my biggest mistake was using this EveBaseController as a catch-all controller for anything else that would be critical for the entire application, even if it didn't have anything to do with authenticating users. Quickly the controller became clunky and unmanageable. This mistake broke the 1st rule of the S.O.L.I.D. principles."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The next mistake made early on in development was creating base level controllers for each top level controller (ex. MarketController extends a MarketBaseController). Initially this strictly served as a way to tuck away voluminous methods and hide them behind expressive function names. This was not a complete failure as my top level controllers were much easier to read, and the underlying logic was easy to find. This seemed like a solid way to abstract pieces of functionality, at least at first."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The ultimate problem with this architecture is that each component works fine as an individual piece. However, when the time came for the components to communicate with one another I had abstracted away tons of functionality into seperate controllers that had no way of interacting with one another. In the future rewrite I will use a combination of service containers/providers and traits in order to properly abstract functionality that is critical to more than one class."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "As the project grew I knew that my architectural mistakes would warrant a rewrite from the ground up. This project has served as one of the best learning experiences in my development career thus far. The rewrite will rectify the unmaintainability on the backend and will change the project from a standard PHP application to a single page application."
-                    )
+            _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
+              _c("h2", [_vm._v("Summary:")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "A passion project that mimics a stock trading and inventory management app for an online game. Built with Laravel, MySQL, and JavaScript."
+                )
+              ]),
+              _vm._v(" "),
+              !_vm.showEveStationTraderSummary
+                ? _c(
+                    "a",
+                    { on: { click: _vm.toggleEveStationTraderSummary } },
+                    [
+                      _vm._v("\n            Show More\n            "),
+                      _c("i", { staticClass: "fas fa-caret-down" })
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showEveStationTraderSummary ? _c("p") : _vm._e(),
+              _vm._v(" "),
+              _vm.showEveStationTraderSummary
+                ? _c("div", { staticClass: "summary-div" }, [
+                    _vm._m(7),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This application is for a game called Eve Online and was the first large scale Laravel application that I had worked on. The project is up for a complete rewrite due to some poor architectural decisions I made early in development that has plagued the project in its entirety."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The overarching goal of the project was to allow players of the MMORPG to easily track their assets, production costs, logistics costs, and all relevant market and broker fees."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The entirety of the feature list is predicated upon the successful authentication of the application's users with their respective Eve Online accounts. Eve uses an OAuth authentication flow with access tokens that lasted 20 minutes, and refresh tokens used to grab new access tokens after they expire. To accomplish this I decided to make a \"master controller\" that I named EveBaseController. This controller was to be extended by every other controller, and the EveBaseController would extend Laravel's base Controller class. This gave me access to all of the out-of-the-box functionality provided by the base Laravel controller and provided me with a layer of abstraction for interacting with Eve's OAuth flow. While this worked fine at first, my biggest mistake was using this EveBaseController as a catch-all controller for anything else that would be critical for the entire application, even if it didn't have anything to do with authenticating users. Quickly the controller became clunky and unmanageable. This mistake broke the 1st rule of the S.O.L.I.D. principles."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The next mistake made early on in development was creating base level controllers for each top-level controller (ex. MarketController extends a MarketBaseController). Initially, this strictly served as a way to tuck away voluminous methods and hide them behind expressive function names. This was not a complete failure as my top-level controllers were much easier to read, and the underlying logic was easy to find. This seemed like a solid way to abstract pieces of functionality, at least at first."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The ultimate problem with this architecture is that each component works fine as an individual piece. However, when the time came for the components to communicate with one another I had abstracted away tons of functionality into separate controllers that had no way of interacting with one another. In the future rewrite, I will use a combination of service containers/providers and traits to properly abstract functionality that is critical to more than one class."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "As the project grew I knew that my architectural mistakes would warrant a rewrite from the ground up. This project has served as one of the best learning experiences in my development career thus far. The rewrite will rectify the unmaintainable code on the backend and will change the project from a standard PHP application to a single page application."
+                      )
+                    ])
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.showEveStationTraderSummary
-              ? _c("a", { on: { click: _vm.toggleEveStationTraderSummary } }, [
-                  _vm._v("\n            Show Less\n            "),
-                  _c("i", { staticClass: "fas fa-caret-up" })
-                ])
-              : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showEveStationTraderSummary
+                ? _c(
+                    "a",
+                    { on: { click: _vm.toggleEveStationTraderSummary } },
+                    [
+                      _vm._v("\n            Show Less\n            "),
+                      _c("i", { staticClass: "fas fa-caret-up" })
+                    ]
+                  )
+                : _vm._e()
+            ])
           ])
-        ])
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("LillyPad Web Development")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content-indent" }, [
-          _vm._m(8),
+      _c(
+        "div",
+        { staticClass: "project-wrapper", attrs: { id: "seluTechDiv" } },
+        [
+          _c("h1", [_vm._v("LillyPad Web Development")]),
           _vm._v(" "),
-          _vm._m(9),
-          _vm._v(" "),
-          _vm._m(10),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
-            _c("h2", [_vm._v("Summary:")]),
+          _c("div", { staticClass: "content-indent" }, [
+            _vm._m(8),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "A uniquely designed website for a fake web agency. Featuring custom designed logos, svg images, and transitions. Built with Laravel and JavaScript."
-              )
-            ]),
+            _vm._m(9),
             _vm._v(" "),
-            !_vm.showSeluTechSummary
-              ? _c("a", { on: { click: _vm.toggleSeluTechSummarySummary } }, [
-                  _vm._v("\n            Show More\n            "),
-                  _c("i", { staticClass: "fas fa-caret-down" })
-                ])
-              : _vm._e(),
+            _vm._m(10),
             _vm._v(" "),
-            _vm.showSeluTechSummary
-              ? _c("div", { staticClass: "summary-div" }, [
-                  _vm._m(11),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The goal of this project was to sharpen my skills with SCSS and to learn how to custom design things like SVG images, logos, and icons."
+            _c(
+              "div",
+              {
+                staticClass: "content-wrapper summary-wrapper",
+                attrs: { id: "seluTechDiv" }
+              },
+              [
+                _c("h2", [_vm._v("Summary:")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "A uniquely designed website for a fake web agency. Featuring custom-designed logos, SVG images, and icons. Built with Laravel and JavaScript."
+                  )
+                ]),
+                _vm._v(" "),
+                !_vm.showSeluTechSummary
+                  ? _c(
+                      "a",
+                      { on: { click: _vm.toggleSeluTechSummarySummary } },
+                      [
+                        _vm._v("\n            Show More\n            "),
+                        _c("i", { staticClass: "fas fa-caret-down" })
+                      ]
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "The first objective was to make a clean and simple website that was fully responsive and looked great at every breakpoint. I opted to not use a framework to assist me with breakpoints as I was too reliant on grid based CSS frameworks like bootstrap. Flexbox was the main tool used for making things responsive, however the display property(among others) of some elements change as the viewport size changes."
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.showSeluTechSummary
+                  ? _c("div", { staticClass: "summary-div" }, [
+                      _vm._m(11),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "The goal of this project was to sharpen my skills with SCSS and to learn how to custom design things like SVG images, logos, and icons."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "The first objective was to make a clean and simple website that was fully responsive and looked great at every breakpoint. I opted to not use a framework to handle the responsive design as I was too reliant on grid-based CSS frameworks like bootstrap. Flexbox was the main tool used for making things responsive, however, the display property(among others) of some elements change as the viewport size changes."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Next was the design of some of the assets that would be imported into the project. For the icon and logo I used Adobe Illustrator. For the SVG elements and the overall design of the website, I chose Adobe XD."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Finally, to make the website more dynamic I chose to use jquery to hide/show certain elements based on user input. To achieve the automated text scrolling across the landing page I imported a package known as Typed.js."
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "In retrospect, I would have opted to use Vue even for the minor DOM manipulation on the website. Vue offers more room for growth, and even in small doses Jquery can become cumbersome. I also did not take full advantage of variables in SCSS which resulted in some repetitive code."
+                        )
+                      ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.showSeluTechSummary
+                  ? _c(
+                      "a",
+                      { on: { click: _vm.toggleSeluTechSummarySummary } },
+                      [
+                        _vm._v("\n            Show Less\n            "),
+                        _c("i", { staticClass: "fas fa-caret-up" })
+                      ]
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Next was the design of some of the assets that would be imported into the project. For the Logo and the icon I used Adobe Illustrator. For the SVG elements, and the overall design of the website, I chose Adobe XD."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Finally, in order to make the website more dynamic I chose to use jquery to hide/show certain elements based on user input. In order to achieve the automated text scrolling across the landing page I imported a package known as Typed.js."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "In retrospect I would have opted to use Vue even for the minor DOM manipulation on the website. Vue offers more room for growth, and even in small doses Jquery can become cumbersome. I also did not take full advantage of variables in SCSS which resulted in some code that was repetitive."
-                    )
-                  ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.showSeluTechSummary
-              ? _c("a", { on: { click: _vm.toggleSeluTechSummarySummary } }, [
-                  _vm._v("\n            Show Less\n            "),
-                  _c("i", { staticClass: "fas fa-caret-up" })
-                ])
-              : _vm._e()
+                  : _vm._e()
+              ]
+            )
           ])
-        ])
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("Laravue To-Do List")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content-indent" }, [
-          _vm._m(12),
+      _c(
+        "div",
+        { staticClass: "project-wrapper", attrs: { id: "bouncingBallsDiv" } },
+        [
+          _c("h1", [_vm._v("Bouncing Balls")]),
           _vm._v(" "),
-          _vm._m(13),
-          _vm._v(" "),
-          _vm._m(14),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
-            _c("h2", [_vm._v("Summary:")]),
+          _c("div", { staticClass: "content-indent" }, [
+            _vm._m(12),
             _vm._v(" "),
-            _c("p", [
-              _vm._v("A simple to-do list using Laravel, Vue, and Bulma CSS.")
-            ]),
+            _vm._m(13),
             _vm._v(" "),
-            !_vm.showLaravueTodoListSummary
-              ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
-                  _vm._v("\n            Show More\n            "),
-                  _c("i", { staticClass: "fas fa-caret-down" })
-                ])
-              : _vm._e(),
+            _vm._m(14),
             _vm._v(" "),
-            _vm.showLaravueTodoListSummary
-              ? _c("div", { staticClass: "summary-div" }, [
-                  _vm._m(15),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "This project was started as a way to learn how to integrate Vue into a Laravel application without using the CLI, learn how to break from the traditional event flow in Vue using an event bus, and to familiarize myself with the Bulma framework."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "is-italic" }, [
-                    _vm._v(
-                      "*This project was used as a learning tool and is not hosted."
-                    )
+            _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
+              _c("h2", [_vm._v("Summary:")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "A simulator that accounts for the mass and velocity of randomly generated balls as they slam into one another and bounce around the canvas. Built with JavaScript."
+                )
+              ]),
+              _vm._v(" "),
+              !_vm.showBallSimulatorSummary
+                ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
+                    _vm._v("\n            Show More\n            "),
+                    _c("i", { staticClass: "fas fa-caret-down" })
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.showLaravueTodoListSummary
-              ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
-                  _vm._v("\n            Show Less\n            "),
-                  _c("i", { staticClass: "fas fa-caret-up" })
-                ])
-              : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showBallSimulatorSummary
+                ? _c("div", { staticClass: "summary-div" }, [
+                    _vm._m(15),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This project was a spin-off of the very first game I created in javascript: pong. The goal was to simulate 2D physics by having balls(circles) of different sizes bounce into one another. The effect is that a larger ball would have a very small net change in velocity and direction if a smaller ball moving at high speeds collided with it and vice versa."
+                      )
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showBallSimulatorSummary
+                ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
+                    _vm._v("\n            Show Less\n            "),
+                    _c("i", { staticClass: "fas fa-caret-up" })
+                  ])
+                : _vm._e()
+            ])
           ])
-        ])
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
-      _c("div", { staticClass: "project-wrapper" }, [
-        _c("h1", [_vm._v("Bouncing Balls")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content-indent" }, [
-          _vm._m(16),
+      _c(
+        "div",
+        { staticClass: "project-wrapper", attrs: { id: "laravueTodoDiv" } },
+        [
+          _c("h1", [_vm._v("Laravue To-Do List")]),
           _vm._v(" "),
-          _vm._m(17),
-          _vm._v(" "),
-          _vm._m(18),
-          _vm._v(" "),
-          _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
-            _c("h2", [_vm._v("Summary:")]),
+          _c("div", { staticClass: "content-indent" }, [
+            _vm._m(16),
             _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "A simulator that accounts for mass and velocity of randomly generated balls as they slam into one another and bounce around the canvas. Built with JavaScript."
-              )
-            ]),
+            _vm._m(17),
             _vm._v(" "),
-            !_vm.showBallSimulatorSummary
-              ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
-                  _vm._v("\n            Show More\n            "),
-                  _c("i", { staticClass: "fas fa-caret-down" })
-                ])
-              : _vm._e(),
+            _vm._m(18),
             _vm._v(" "),
-            _vm.showBallSimulatorSummary
-              ? _c("div", { staticClass: "summary-div" }, [
-                  _vm._m(19),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "This project was a spin off of the very first game I created in javascript: pong. The goal was to simulate 2D physics by having balls(circles) of different sizes bounce into one another. The effect is that a larger ball would have a very small net change in velocity and direction if a smaller ball moving at high speeds collided with it, and vice versa."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "is-italic" }, [
-                    _vm._v(
-                      "*This project was used as a learning tool and is not hosted."
-                    )
+            _c("div", { staticClass: "content-wrapper summary-wrapper" }, [
+              _c("h2", [_vm._v("Summary:")]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v("A simple to-do list using Laravel, Vue, and Bulma CSS.")
+              ]),
+              _vm._v(" "),
+              !_vm.showLaravueTodoListSummary
+                ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
+                    _vm._v("\n            Show More\n            "),
+                    _c("i", { staticClass: "fas fa-caret-down" })
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.showBallSimulatorSummary
-              ? _c("a", { on: { click: _vm.toggleBallSimulatorSummary } }, [
-                  _vm._v("\n            Show Less\n            "),
-                  _c("i", { staticClass: "fas fa-caret-up" })
-                ])
-              : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showLaravueTodoListSummary
+                ? _c("div", { staticClass: "summary-div" }, [
+                    _vm._m(19),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This project was started as a way to learn how to integrate Vue into a Laravel application without using the CLI, learn how to break from the traditional event flow in Vue using an event bus, and to familiarize myself with the Bulma framework."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "is-italic" }, [
+                      _vm._v(
+                        "*This project was used as a learning tool and is not hosted."
+                      )
+                    ])
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.showLaravueTodoListSummary
+                ? _c("a", { on: { click: _vm.toggleLaravueTodoListSummary } }, [
+                    _vm._v("\n            Show Less\n            "),
+                    _c("i", { staticClass: "fas fa-caret-up" })
+                  ])
+                : _vm._e()
+            ])
           ])
-        ])
-      ]),
+        ]
+      ),
       _vm._v(" "),
       _c("hr")
     ])
@@ -24695,7 +24791,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _vm._v(
-          "Authenticate users using Laravel's built in authentication system."
+          "Authenticate users using Laravel's built-in authentication system."
         )
       ]),
       _vm._v(" "),
@@ -24707,13 +24803,13 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _vm._v(
-          "Use the Eve Online's Oauth system in order to receive access/refresh tokens for users"
+          "Use the Eve Online's Oauth system to receive access/refresh tokens for users"
         )
       ]),
       _vm._v(" "),
       _c("li", [
         _vm._v(
-          "Fetch user's in-game data and dynamically update the application accordingly"
+          "Fetch the user's in-game data and dynamically update the application accordingly"
         )
       ]),
       _vm._v(" "),
@@ -24796,74 +24892,6 @@ var staticRenderFns = [
       _c("h2", [_vm._v("Technologies Used:")]),
       _vm._v(" "),
       _c("div", { staticClass: "tech-list" }, [
-        _c("span", [_vm._v("Laravel")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("Vue")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("Bulma/Sass")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("MySQL")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content-wrapper links-wrapper" }, [
-      _c("h2", [
-        _vm._v("\n            Github:\n            "),
-        _c(
-          "a",
-          { attrs: { href: "https://github.com/jjhugej/laravue_todo_list" } },
-          [_vm._v("jjhugej/laravue_todo_list")]
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
-      _vm._v("\n          Website:\n          "),
-      _c("p", { staticClass: "is-inline-block" }, [
-        _vm._v("Learning Project - Not Hosted")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "summary-list" }, [
-      _c("p", [_vm._v("Objectives:")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("Create API endpoints to persist to-do items")]),
-      _vm._v(" "),
-      _c("li", [
-        _vm._v(
-          "Authenticate users via the Laravel's out-of-the-box authentication system"
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [_vm._v("Style the website using the Bulma CSS framework")]),
-      _vm._v(" "),
-      _c("li", [_vm._v("Integrate Vue into a non-S.P.A. website")]),
-      _vm._v(" "),
-      _c("li", [
-        _vm._v("Use a global event bus in lieu of Vue's standard event flow")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
-      _c("h2", [_vm._v("Technologies Used:")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "tech-list" }, [
         _c("span", [_vm._v("HTML")]),
         _vm._v(" "),
         _c("span", [_vm._v("CSS")]),
@@ -24898,7 +24926,9 @@ var staticRenderFns = [
     return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
       _vm._v("\n          Website:\n          "),
       _c("p", { staticClass: "is-inline-block" }, [
-        _vm._v("Learning Project - Not Hosted")
+        _c("a", { attrs: { href: "bouncingballs" } }, [
+          _vm._v("Bouncing Balls")
+        ])
       ])
     ])
   },
@@ -24917,6 +24947,74 @@ var staticRenderFns = [
         _vm._v(
           "Account for mass and velocity of each ball and use the elastic collision formula to move the balls accordingly"
         )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content-wrapper tech-wrapper" }, [
+      _c("h2", [_vm._v("Technologies Used:")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tech-list" }, [
+        _c("span", [_vm._v("Laravel")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Vue")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("Bulma/Sass")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("MySQL")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content-wrapper links-wrapper" }, [
+      _c("h2", [
+        _vm._v("\n            Github:\n            "),
+        _c(
+          "a",
+          { attrs: { href: "https://github.com/jjhugej/laravue_todo_list" } },
+          [_vm._v("jjhugej/laravue_todo_list")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", { staticClass: "content-wrapper links-wrapper" }, [
+      _vm._v("\n          Website:\n          "),
+      _c("p", { staticClass: "is-inline-block" }, [
+        _vm._v("Project Not Hosted")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "summary-list" }, [
+      _c("p", [_vm._v("Objectives:")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Create API endpoints to persist to-do items")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v(
+          "Authenticate users via the Laravel's out-of-the-box authentication system"
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Style the website using the Bulma CSS framework")]),
+      _vm._v(" "),
+      _c("li", [_vm._v("Integrate Vue into a non-S.P.A. website")]),
+      _vm._v(" "),
+      _c("li", [
+        _vm._v("Use a global event bus instead of Vue's standard event flow")
       ])
     ])
   }
@@ -24945,11 +25043,11 @@ var render = function() {
   return _c("section", { staticClass: "section" }, [
     _c("div", { staticClass: "container" }, [
       _c("h1", { staticClass: "has-text-centered" }, [
-        _vm._v("Request My Resume")
+        _vm._v("Resume Request")
       ]),
       _vm._v(" "),
       _c("h2", { staticClass: "has-text-centered" }, [
-        _vm._v("Let's get to know each other")
+        _vm._v("Please fill out the form below")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "form-wrapper container" }, [
@@ -24968,39 +25066,38 @@ var render = function() {
                 _vm._v("Name")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "control" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.name,
-                      expression: "name"
-                    }
-                  ],
-                  staticClass: "input",
-                  attrs: {
-                    name: "name",
-                    type: "text",
-                    placeholder: "e.g. Alex Smith"
-                  },
-                  domProps: { value: _vm.name },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.name = $event.target.value
-                    }
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
                   }
-                }),
-                _vm._v(" "),
-                _vm.errors.name
-                  ? _c("p", { staticClass: "has-text-danger" }, [
-                      _vm._v(_vm._s(_vm.errors.name[0]))
-                    ])
-                  : _vm._e()
-              ])
+                ],
+                staticClass: "input",
+                attrs: {
+                  name: "name",
+                  type: "text",
+                  placeholder: "e.g. Alex Smith",
+                  required: ""
+                },
+                domProps: { value: _vm.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.name = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm.errors.name
+                ? _c("p", { staticClass: "has-text-danger" }, [
+                    _vm._v(_vm._s(_vm.errors.name[0]))
+                  ])
+                : _vm._e()
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
@@ -25020,7 +25117,8 @@ var render = function() {
                   attrs: {
                     name: "email",
                     type: "email",
-                    placeholder: "alexsmith@gmail.com"
+                    placeholder: "alexsmith@gmail.com",
+                    required: ""
                   },
                   domProps: { value: _vm.email },
                   on: {
@@ -25058,7 +25156,8 @@ var render = function() {
                   attrs: {
                     name: "company",
                     type: "text",
-                    placeholder: "Alex Smith's startup"
+                    placeholder: "Alex Smith's startup",
+                    required: ""
                   },
                   domProps: { value: _vm.company },
                   on: {
@@ -25096,7 +25195,8 @@ var render = function() {
                   attrs: {
                     name: "position",
                     type: "text",
-                    placeholder: "Recruiter"
+                    placeholder: "Recruiter",
+                    required: ""
                   },
                   domProps: { value: _vm.position },
                   on: {
@@ -25119,7 +25219,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
               _c("label", { staticClass: "label" }, [
-                _vm._v("Tell me about your company")
+                _vm._v("Please write a brief description of your company:")
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
@@ -25146,11 +25246,6 @@ var render = function() {
                 })
               ])
             ]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { type: "hidden", name: "_token" },
-              domProps: { value: _vm.csrf }
-            }),
             _vm._v(" "),
             _c("div", { staticClass: "control" }, [
               _c(

@@ -1,22 +1,21 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="has-text-centered">Request My Resume</h1>
-      <h2 class="has-text-centered">Let's get to know each other</h2>
+      <h1 class="has-text-centered">Resume Request</h1>
+      <h2 class="has-text-centered">Please fill out the form below</h2>
       <div class="form-wrapper container">
         <form v-on:submit.prevent>
           <div class="field">
             <label for="name" class="label">Name</label>
-            <div class="control">
-              <input
-                v-model="name"
-                name="name"
-                class="input"
-                type="text"
-                placeholder="e.g. Alex Smith"
-              />
-              <p v-if="errors.name" class="has-text-danger">{{errors.name[0]}}</p>
-            </div>
+            <input
+              v-model="name"
+              name="name"
+              class="input"
+              type="text"
+              placeholder="e.g. Alex Smith"
+              required
+            />
+            <p v-if="errors.name" class="has-text-danger">{{errors.name[0]}}</p>
           </div>
           <div class="field">
             <label class="label">Email</label>
@@ -27,6 +26,7 @@
                 class="input"
                 type="email"
                 placeholder="alexsmith@gmail.com"
+                required
               />
               <p v-if="errors.email" class="has-text-danger">{{errors.email[0]}}</p>
             </div>
@@ -40,6 +40,7 @@
                 class="input"
                 type="text"
                 placeholder="Alex Smith's startup"
+                required
               />
               <p v-if="errors.company" class="has-text-danger">{{errors.company[0]}}</p>
             </div>
@@ -53,17 +54,18 @@
                 class="input"
                 type="text"
                 placeholder="Recruiter"
+                required
               />
               <p v-if="errors.position" class="has-text-danger">{{errors.position[0]}}</p>
             </div>
           </div>
           <div class="field">
-            <label class="label">Tell me about your company</label>
+            <label class="label">Please write a brief description of your company:</label>
             <div class="control">
               <textarea v-model="notes" name="notes" class="textarea"></textarea>
             </div>
           </div>
-          <input type="hidden" name="_token" :value="csrf" />
+
           <div class="control">
             <button
               :disabled="btnDisabled"
@@ -89,17 +91,11 @@ export default {
       btnDisabled: false,
       btnText: "Submit",
       errors: {},
-      csrf: document
-        .querySelector('meta[name="csrf-token"]')
-        .getAttribute("content"),
     };
   },
   computed: {},
   methods: {
     sendRequest: function () {
-      //validate
-      //make post request to /resumeRequest
-
       axios
         .post("/resumerequest", {
           name: this.name,
@@ -123,7 +119,6 @@ export default {
         });
     },
   },
-  mounted() {},
 };
 </script>
 
@@ -140,6 +135,7 @@ h2 {
   margin-top: 30px;
   width: 50vw;
 }
+
 textarea {
   width: 100%;
   height: 20vh;
