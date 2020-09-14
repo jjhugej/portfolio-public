@@ -38,15 +38,16 @@ class ResumeRequestController extends Controller
      */
     public function store(Request $request)
     {        
-        
         // Validate
         $validatedData = $request->validate([
             'name' => 'required',
             'email' => 'required | email',
+            'phone' => array('required','regex: ^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$^'),
             'company' => 'required',
             'position' => 'required',
             'notes' => 'nullable|max:2000',
-        ]);
+            ]);
+            
 
         $resumeRequest = ResumeRequest::create($validatedData);
 

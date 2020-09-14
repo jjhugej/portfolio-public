@@ -17,6 +17,7 @@ class CreateResumeRequestsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('phone');
             $table->string('company');
             $table->string('position');
             $table->text('notes')->nullable();

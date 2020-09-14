@@ -2436,6 +2436,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2563,11 +2564,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       name: "",
       email: "",
+      phone: "",
       company: "",
       position: "",
       notes: "",
@@ -2581,9 +2600,11 @@ __webpack_require__.r(__webpack_exports__);
     sendRequest: function sendRequest() {
       var _this = this;
 
+      this.errors = {};
       axios.post("/resumerequest", {
         name: this.name,
         email: this.email,
+        phone: this.phone,
         company: this.company,
         position: this.position,
         notes: this.notes
@@ -2593,6 +2614,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.btnText = "Submitted!";
         _this.name = "";
         _this.email = "";
+        _this.phone = "";
         _this.company = "";
         _this.position = "";
         _this.notes = "";
@@ -24301,7 +24323,7 @@ var render = function() {
               _vm._v(" "),
               _c("p", [
                 _vm._v(
-                  "A S.P.A. web application that was built for a local animal shelter. Using Laravel and Vue.js this app is feature-rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
+                  "A S.P.A. web application that was built for a local animal shelter. Using Laravel and Vue.js this app is feature-rich with one goal in mind: helping animals."
                 )
               ]),
               _vm._v(" "),
@@ -24337,6 +24359,12 @@ var render = function() {
                     _c("p", [
                       _vm._v(
                         "The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features."
                       )
                     ]),
                     _vm._v(" "),
@@ -25140,6 +25168,45 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
+              _c("label", { staticClass: "label" }, [_vm._v("Phone Number")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "control" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.phone,
+                      expression: "phone"
+                    }
+                  ],
+                  staticClass: "input",
+                  attrs: {
+                    name: "phone",
+                    type: "phone",
+                    placeholder: "123-456-7890",
+                    required: ""
+                  },
+                  domProps: { value: _vm.phone },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.phone = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.errors.phone
+                  ? _c("p", { staticClass: "has-text-danger" }, [
+                      _vm._v(_vm._s(_vm.errors.phone[0]))
+                    ])
+                  : _vm._e()
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "field" }, [
               _c("label", { staticClass: "label" }, [_vm._v("Company")]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
@@ -25219,7 +25286,9 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
               _c("label", { staticClass: "label" }, [
-                _vm._v("Please write a brief description of your company:")
+                _vm._v(
+                  "\n            Please write a brief description of your\n            company:\n          "
+                )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [

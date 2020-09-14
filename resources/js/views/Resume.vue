@@ -15,7 +15,7 @@
               placeholder="e.g. Alex Smith"
               required
             />
-            <p v-if="errors.name" class="has-text-danger">{{errors.name[0]}}</p>
+            <p v-if="errors.name" class="has-text-danger">{{ errors.name[0] }}</p>
           </div>
           <div class="field">
             <label class="label">Email</label>
@@ -28,7 +28,21 @@
                 placeholder="alexsmith@gmail.com"
                 required
               />
-              <p v-if="errors.email" class="has-text-danger">{{errors.email[0]}}</p>
+              <p v-if="errors.email" class="has-text-danger">{{ errors.email[0] }}</p>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Phone Number</label>
+            <div class="control">
+              <input
+                v-model="phone"
+                name="phone"
+                class="input"
+                type="phone"
+                placeholder="123-456-7890"
+                required
+              />
+              <p v-if="errors.phone" class="has-text-danger">{{ errors.phone[0] }}</p>
             </div>
           </div>
           <div class="field">
@@ -42,7 +56,7 @@
                 placeholder="Alex Smith's startup"
                 required
               />
-              <p v-if="errors.company" class="has-text-danger">{{errors.company[0]}}</p>
+              <p v-if="errors.company" class="has-text-danger">{{ errors.company[0] }}</p>
             </div>
           </div>
           <div class="field">
@@ -56,11 +70,14 @@
                 placeholder="Recruiter"
                 required
               />
-              <p v-if="errors.position" class="has-text-danger">{{errors.position[0]}}</p>
+              <p v-if="errors.position" class="has-text-danger">{{ errors.position[0] }}</p>
             </div>
           </div>
           <div class="field">
-            <label class="label">Please write a brief description of your company:</label>
+            <label class="label">
+              Please write a brief description of your
+              company:
+            </label>
             <div class="control">
               <textarea v-model="notes" name="notes" class="textarea"></textarea>
             </div>
@@ -71,7 +88,7 @@
               :disabled="btnDisabled"
               v-on:click="sendRequest"
               class="button is-primary"
-            >{{btnText}}</button>
+            >{{ btnText }}</button>
           </div>
         </form>
       </div>
@@ -85,6 +102,7 @@ export default {
     return {
       name: "",
       email: "",
+      phone: "",
       company: "",
       position: "",
       notes: "",
@@ -96,10 +114,12 @@ export default {
   computed: {},
   methods: {
     sendRequest: function () {
+      this.errors = {};
       axios
         .post("/resumerequest", {
           name: this.name,
           email: this.email,
+          phone: this.phone,
           company: this.company,
           position: this.position,
           notes: this.notes,
@@ -110,6 +130,7 @@ export default {
           this.btnText = "Submitted!";
           this.name = "";
           this.email = "";
+          this.phone = "";
           this.company = "";
           this.position = "";
           this.notes = "";

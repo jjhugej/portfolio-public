@@ -27,7 +27,7 @@
           </h2>
           <div class="content-wrapper summary-wrapper">
             <h2>Summary:</h2>
-            <p>A S.P.A. web application that was built for a local animal shelter. Using Laravel and Vue.js this app is feature-rich with one goal in mind: helping animals. This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features.</p>
+            <p>A S.P.A. web application that was built for a local animal shelter. Using Laravel and Vue.js this app is feature-rich with one goal in mind: helping animals.</p>
             <a v-if="!showPuppyProjectSummary" @click="togglePuppyProjectSummary">
               Show More
               <i class="fas fa-caret-down"></i>
@@ -46,6 +46,7 @@
               <p>The first goal was to create a fully functional API using Laravel. The API functions similarly to a standard non-SPA Laravel application, except for the authentication flow. To solve my authentication issues I decided to forego an OAuth system and instead used Laravel's Sanctum package. Sanctum offered a simple way to authenticate a single page application without the use of tokens. Instead of tokens Sanctum uses the built-in cookie-based authentication service that comes out-of-the-box with Laravel. This allowed me to keep the traditional CSRF protection and session authentication.</p>
               <p>The second goal was to consume the API with the help of the Axios package and then use Vue to simplify managing the front end of the application. While Axios' main function is to make AJAX requests cleaner, the best part was the automation of dealing with CSRF tokens. Vue.js gave me the level of maintainability that I needed on the front end and allowed me to focus more on the business logic instead of constantly having to reach in and out of the DOM to manage application state. To further simplify state management I opted to use the VueX centralized state management store.</p>
               <p>The final goal of the project was to test Laravel's premium package called Nova. While a custom administrator dashboard was certainly an option, Nova offered a ton of features that took only minutes to set up. I received access to C.R.U.D functionality, graphs, and charts that were well designed and seamlessly integrated with my application. Nova was worth the $100 price tag for a quick admin dashboard set up, but lacked some customizability options and has some issues dealing with SQL pivot tables.</p>
+              <p>This website is currently in beta and is awaiting feedback from the animal shelter before finalizing the design and features.</p>
               <p
                 class="is-italic"
               >*Note: because Nova is a paid package I am unable to upload the code to a public repository per the license agreement. You will notice that the repository on GitHub is titled "Puppy Project Pre Nova" and does not contain any of the Nova code and does not reflect some of the new features or refactors in the latest version.</p>
