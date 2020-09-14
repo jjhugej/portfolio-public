@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\ResumeRequest;
+use App\Mail\ResumeRequestMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+
 
 class ResumeRequestController extends Controller
 {
@@ -46,6 +49,8 @@ class ResumeRequestController extends Controller
         ]);
 
         $resumeRequest = ResumeRequest::create($validatedData);
+
+        Mail::to(request('email'))->send(new ResumeRequestMail(request('name')));
                 
         return ['success' => true, 'message' => 'request accepted','requestData' => $resumeRequest];
  
