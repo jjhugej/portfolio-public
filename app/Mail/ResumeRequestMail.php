@@ -29,6 +29,7 @@ class ResumeRequestMail extends Mailable
      */
     public function build()
     {
+        //markdown() provivdes out of the box styling
         return $this->markdown('emails.resumeRequestMailView')
                 ->subject('Jonathan Lilly\'s Resume');
     }
